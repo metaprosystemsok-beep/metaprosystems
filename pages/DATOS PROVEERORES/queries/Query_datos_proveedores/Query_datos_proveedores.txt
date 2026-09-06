@@ -1,0 +1,9 @@
+SELECT 
+    id, 
+    nombre_persona, 
+    nombre_empresa, 
+    telefono, 
+    email, 
+    direccion 
+FROM public.datos_proveedores
+ORDER BY id ASC;

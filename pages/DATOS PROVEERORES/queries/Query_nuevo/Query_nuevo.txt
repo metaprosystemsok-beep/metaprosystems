@@ -1,0 +1,4 @@
+INSERT INTO public.datos_proveedores (id)
+VALUES (
+  (SELECT COALESCE(MAX(id), 0) + 1 FROM public.datos_proveedores)
+);

@@ -1,0 +1,8 @@
+SELECT 
+    (SELECT COUNT(*) FROM public.metricas_interaccion 
+     WHERE canal = 'whatsapp pronutrition' 
+       AND fecha::date = CURRENT_DATE) AS total_hoy,
+       
+    (SELECT COUNT(*) FROM public.metricas_interaccion 
+     WHERE canal = 'whatsapp pronutrition' 
+       AND fecha::date = CURRENT_DATE - INTERVAL '1 day') AS total_ayer;

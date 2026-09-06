@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "\"0px 0px 0px 2px #FFFFFF\"",
+  "bottomRow": 38,
+  "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+  "buttonColor": "#1e1e1f",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "barcode",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "bv27w67gmz",
+  "leftColumn": 42,
+  "minWidth": 120,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 11,
+  "mobileRightColumn": 27,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onClick": "navigateTo('CATALOGO DE PRODUCTOS')",
+  "originalBottomRow": 37,
+  "originalTopRow": 31,
+  "parentColumnSpace": 3.6224708557128906,
+  "parentId": "i26vksivp7",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "CATÁLOGO DE PRODUCTOS",
+  "tooltip": "",
+  "topRow": 32,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "zwra6dtmd9",
+  "widgetName": "Button3_productos"
+}

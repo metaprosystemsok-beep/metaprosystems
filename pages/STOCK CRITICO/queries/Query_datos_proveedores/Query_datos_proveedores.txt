@@ -1,0 +1,4 @@
+SELECT * 
+FROM public.datos_proveedores 
+WHERE id = {{ Input1.text ? Number(Input1.text) : 0 }}
+ORDER BY id ASC;

@@ -1,0 +1,3 @@
+SELECT id, nombre_cliente, email, telefono, total_compras, ultima_compra, notas 
+FROM base_clientes 
+ORDER BY email ASC, ultima_compra DESC;

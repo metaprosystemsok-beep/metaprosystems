@@ -1,0 +1,1 @@
+INSERT INTO public.stock_critico ("nombre_producto","stock_actual","fecha_deteccion") VALUES ('{{(Table_stock_critico.newRow || {}).nombre_producto}}','{{(Table_stock_critico.newRow || {}).stock_actual}}','{{(Table_stock_critico.newRow || {}).fecha_deteccion}}')

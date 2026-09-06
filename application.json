@@ -1,0 +1,98 @@
+{
+  "appIsExample": false,
+  "appLayout": {
+    "type": "FLUID"
+  },
+  "applicationDetail": {
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoOnly",
+      "navStyle": "stacked",
+      "orientation": "top",
+      "position": "static",
+      "showNavbar": false,
+      "showSignIn": false
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  },
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "color": "#FFDEDE",
+  "embedSetting": {
+    "height": "720px",
+    "showNavigationBar": false,
+    "width": "1024px"
+  },
+  "evaluationVersion": 2,
+  "pages": [
+    {
+      "id": "INICIO",
+      "isDefault": true
+    },
+    {
+      "id": "MENSAJERIA",
+      "isDefault": false
+    },
+    {
+      "id": "METRICAS ADS",
+      "isDefault": false
+    },
+    {
+      "id": "DETALLE DE VENTAS",
+      "isDefault": false
+    },
+    {
+      "id": "CARRITOS ABANDONADOS",
+      "isDefault": false
+    },
+    {
+      "id": "CATALOGO DE PRODUCTOS",
+      "isDefault": false
+    },
+    {
+      "id": "STOCK CRITICO",
+      "isDefault": false
+    },
+    {
+      "id": "GESTION DE COMPRAS",
+      "isDefault": false
+    },
+    {
+      "id": "DATOS PROVEERORES",
+      "isDefault": false
+    },
+    {
+      "id": "BASE CLIENTES",
+      "isDefault": false
+    },
+    {
+      "id": "REPORTE AUDITORIA CONSULTORIA",
+      "isDefault": false
+    }
+  ],
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "unpublishedApplicationDetail": {
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoOnly",
+      "navStyle": "stacked",
+      "orientation": "top",
+      "position": "static",
+      "showNavbar": false,
+      "showSignIn": false
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  }
+}

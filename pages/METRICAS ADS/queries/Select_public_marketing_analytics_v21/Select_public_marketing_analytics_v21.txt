@@ -1,0 +1,12 @@
+SELECT
+  *
+FROM
+  public.marketing_analytics_v2
+WHERE
+  "plataforma" ilike '%{{TABLA_REPORTE.searchText}}%'
+ORDER BY
+  "{{TABLA_REPORTE.sortOrder.column || 'id'}}" {{TABLA_REPORTE.sortOrder.order !== "desc" ? "" : "DESC"}}
+LIMIT
+  {{TABLA_REPORTE.pageSize}}
+OFFSET
+  {{TABLA_REPORTE.pageOffset}}

@@ -1,0 +1,16 @@
+SELECT 
+  CASE 
+   WHEN LOWER('{{ SELEC_METRICAS.selectedOptionValue }}') = 'alcance' THEN COALESCE(SUM(alcance::numeric), 0)
+   WHEN LOWER('{{ SELEC_METRICAS.selectedOptionValue }}') = 'likes' THEN COALESCE(SUM(likes::numeric), 0)
+   WHEN LOWER('{{ SELEC_METRICAS.selectedOptionValue }}') = 'guardados' THEN COALESCE(SUM(guardados::numeric), 0)
+   WHEN LOWER('{{ SELEC_METRICAS.selectedOptionValue }}') = 'comentarios' THEN COALESCE(SUM(comentarios::numeric), 0)
+   WHEN LOWER('{{ SELEC_METRICAS.selectedOptionValue }}') = 'compartidos' THEN COALESCE(SUM(compartidos::numeric), 0)
+   WHEN LOWER('{{ SELEC_METRICAS.selectedOptionValue }}') = 'cpa' THEN COALESCE(SUM(cpa::numeric), 0)
+   WHEN LOWER('{{ SELEC_METRICAS.selectedOptionValue }}') = 'roas' THEN COALESCE(SUM(roas::numeric), 0)
+   WHEN LOWER('{{ SELEC_METRICAS.selectedOptionValue }}') = 'adquisicion_click' THEN COALESCE(SUM(adquisicion_click::numeric), 0)
+    ELSE 0
+  END AS total
+FROM "marketing_analytics_v2"
+WHERE LOWER("plataforma") = 'tiktok'
+  AND "fecha"::date >= '{{ FECHA1.formattedDate }}'::date
+  AND "fecha"::date <= '{{ FECHA2.formattedDate }}'::date;

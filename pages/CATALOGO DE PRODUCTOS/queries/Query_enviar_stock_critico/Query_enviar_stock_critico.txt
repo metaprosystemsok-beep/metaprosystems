@@ -1,0 +1,4 @@
+INSERT INTO stock_critico (id, nombre_producto, costo)
+SELECT id, nombre_producto, costo 
+FROM public.ventas_y_finanzas 
+WHERE id IN ({{ ventas_y_finanzas.selectedRows.length > 0 ? ventas_y_finanzas.selectedRows.map(r => r.id).join(',') : 0 }})

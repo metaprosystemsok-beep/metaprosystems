@@ -1,0 +1,1 @@
+SELECT * FROM public.dashboard_reportes_semanales ORDER BY id DESC;

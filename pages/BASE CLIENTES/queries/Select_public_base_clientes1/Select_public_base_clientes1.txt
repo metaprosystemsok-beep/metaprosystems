@@ -1,0 +1,10 @@
+SELECT
+  *
+FROM
+  public.base_clientes
+ORDER BY
+  "{{TABLA_CLIENTES.sortOrder.column || 'id'}}" {{TABLA_CLIENTES.sortOrder.order !== "desc" ? "" : "DESC"}}
+LIMIT
+  {{TABLA_CLIENTES.pageSize}}
+OFFSET
+  {{TABLA_CLIENTES.pageOffset}}

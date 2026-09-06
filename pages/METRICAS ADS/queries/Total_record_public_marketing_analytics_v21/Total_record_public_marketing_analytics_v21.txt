@@ -1,0 +1,1 @@
+SELECT COUNT(*) from public.marketing_analytics_v2 where plataforma ilike '%{{TABLA_REPORTE.searchText}}%';

@@ -1,0 +1,7 @@
+{
+  "tipo": "email",
+  "email": "{{Input5.text}}",
+	"nombre_cliente": "{{Input2.text}}",
+  "nombre_empresa": "{{Input3.text}}",
+  "productos": {{ Table_stock_critico.selectedRows.map(p => ({ "id": p.id, "nombre_producto": p.nombre_producto, "costo": p.costo, "stock_actual": p.stock_actual })) }}
+}

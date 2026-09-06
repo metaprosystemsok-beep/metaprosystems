@@ -1,0 +1,10 @@
+SELECT
+  *
+FROM
+  public.stock_critico
+ORDER BY
+  "{{Table_stock_critico.sortOrder.column || 'id'}}" {{Table_stock_critico.sortOrder.order !== "desc" ? "" : "DESC"}}
+LIMIT
+  {{Table_stock_critico.pageSize}}
+OFFSET
+  {{Table_stock_critico.pageOffset}}

@@ -1,0 +1,39 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 100,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 1,
+  "bottomRow": 101,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ivj2wq56tc",
+  "leftColumn": 32,
+  "mobileBottomRow": 90,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 13,
+  "mobileTopRow": 58,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 16.546875,
+  "parentId": "iu1ta9kijf",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "source": "https://agencia-chatwoot.f5jcmo.easypanel.host/app/accounts/2/inbox-view",
+  "topRow": 31,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "1ken5cdpwf",
+  "widgetName": "Iframe1"
+}

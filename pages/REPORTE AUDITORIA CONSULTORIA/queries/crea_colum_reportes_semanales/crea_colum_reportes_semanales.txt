@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS public.dashboard_reportes_semanales (
+    id SERIAL PRIMARY KEY,
+    fecha_generacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    periodo VARCHAR(100),
+    
+    -- Métricas financieras extraídas (para gráficos)
+    ingresos_brutos NUMERIC(15,2),
+    ventas_reales_cantidad INT,
+    inversion_inventario NUMERIC(15,2),
+    margen_operativo NUMERIC(5,2),
+    tasa_recuperacion_carritos NUMERIC(5,2),
+    costo_envios_total NUMERIC(15,2),
+    
+    -- Reportes en texto completo de ambos agentes
+    reporte_financiero_texto TEXT,
+    analisis_competencia TEXT,
+    auditoria_propia TEXT,
+    plan_accion_marketing TEXT,
+    
+    estado VARCHAR(50) DEFAULT 'Procesado'
+);

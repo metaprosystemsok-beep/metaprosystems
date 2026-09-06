@@ -1,0 +1,7 @@
+UPDATE "tabla_turnos"
+SET 
+    nombre = NULL,
+    telefono = NULL,
+    detalle = NULL,
+    fecha = NULL
+WHERE id = {{ Number(appsmith.store.id_turno_seleccionado) }};

@@ -1,0 +1,1 @@
+UPDATE public.stock_critico SET "nombre_producto"= '{{Table_stock_critico.updatedRow.nombre_producto}}', "stock_actual"= '{{Table_stock_critico.updatedRow.stock_actual}}', "fecha_deteccion"= '{{Table_stock_critico.updatedRow.fecha_deteccion}}' WHERE "id"= {{Table_stock_critico.updatedRow.id}};

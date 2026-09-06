@@ -1,0 +1,2 @@
+DELETE FROM stock_critico 
+WHERE id IN ({{ Table_stock_critico.selectedRows.map(r => r.id).join(',') }})

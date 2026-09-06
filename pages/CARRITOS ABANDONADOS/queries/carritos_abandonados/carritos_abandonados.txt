@@ -1,0 +1,15 @@
+SELECT 
+    id,
+    fecha,
+    cliente_nombre,
+    cliente_email,
+    cliente_telefono,
+    localidad_envio,
+    provincia_envio,
+    producto,
+    total,
+    costo_envio,
+    tipo_envio,
+		mensaje_enviado
+FROM carritos_abandonados
+ORDER BY fecha DESC;

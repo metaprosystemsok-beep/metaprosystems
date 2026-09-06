@@ -1,0 +1,15 @@
+ SELECT 
+    SUM(total_venta) as facturacion_bruta,
+    SUM(costo_envio) as costo_operativo,
+    SUM(total_venta - costo_envio) as ganancia_neta,
+    producto_venta
+FROM detalle_de_ventas
+WHERE CAST(fecha AS DATE) BETWEEN 
+      CAST('{{DatePicker1.selectedDate}}' AS DATE) 
+      AND 
+      CAST('{{DatePicker2.selectedDate}}' AS DATE)
+  AND (
+        '{{Select_busca_productos.selectedOptionValue}}' = ''
+        OR producto_venta = '{{Select_busca_productos.selectedOptionValue}}'
+      )
+GROUP BY producto_venta

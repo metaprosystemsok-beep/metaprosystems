@@ -1,0 +1,3 @@
+SELECT id, hora, detalle, nombre, telefono, fecha
+FROM tabla_turnos 
+ORDER BY id ASC;

@@ -1,0 +1,8 @@
+SELECT *
+FROM public.gestion_compras
+ORDER BY 
+    "{{Table1.sortOrder.column || 'id'}}" {{Table1.sortOrder.order !== "desc" ? "DESC" : "ASC"}}
+LIMIT 
+    {{Table1.pageSize}}
+OFFSET 
+    {{Table1.pageOffset}}

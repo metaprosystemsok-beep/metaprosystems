@@ -1,0 +1,67 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 24,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "a5av0hqpcz",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "metricas",
+  "labelTextColor": "#22c55e",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 44,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 23,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 19,
+  "mobileTopRow": 16,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{selec_metricas_facebook.run();\nselec_metricas_tiktok.run();\nselec_metricas_instagram.run();\nselec_metricas_metaads.run()}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 17,
+  "originalTopRow": 10,
+  "parentColumnSpace": 16.859375,
+  "parentId": "iidhn0i0uk",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  { \"label\": \"Alcance\", \"value\": \"alcance\" },\n  { \"label\": \"Likes\", \"value\": \"likes\" },\n  { \"label\": \"Guardados\", \"value\": \"guardados\" },\n  { \"label\": \"Comentarios\", \"value\": \"comentarios\" },\n\t{ \"label\": \"Compartidos\", \"value\": \"compartidos\" },\n  { \"label\": \"CPA\", \"value\": \"cpa\" },\n  { \"label\": \"ROAS\", \"value\": \"roas\" },\n  { \"label\": \"Adquisición por click\", \"value\": \"adquisicion_click\" }\n]",
+  "topRow": 16,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "yiolwhdii4",
+  "widgetName": "SELEC_METRICAS"
+}

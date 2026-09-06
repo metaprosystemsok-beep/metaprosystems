@@ -1,0 +1,1 @@
+SELECT * FROM stock_critico ORDER BY stock_actual ASC;

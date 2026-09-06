@@ -1,0 +1,8 @@
+UPDATE public.datos_proveedores
+SET 
+  nombre_persona = '{{ Input2.text }}',
+  nombre_empresa = '{{ Input3.text }}',
+  telefono = '{{ Input4.text }}',
+  email = '{{ Input5.text }}',
+  direccion = '{{ Input6.text }}'
+WHERE id = {{ Table_datos_proveedores.selectedRow.id }};

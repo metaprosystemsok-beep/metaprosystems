@@ -1,0 +1,3 @@
+SELECT SUM(total) as total
+FROM carritos_abandonados
+WHERE CAST(fecha AS DATE) BETWEEN CAST('{{ DatePicker1.selectedDate }}' AS DATE) AND CAST('{{ DatePicker2.selectedDate }}' AS DATE)

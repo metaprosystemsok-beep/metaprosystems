@@ -1,0 +1,14 @@
+SELECT 
+    id,
+    nombre_producto,
+    costo,
+    porcentaje,
+    -- Calcula transferencia sumando el porcentaje de ganancia al costo
+    ROUND((costo * (1 + (porcentaje / 100.0))), 2) AS transferencia_efectivo,
+    porcentaje_tarjeta,
+    -- Calcula tarjeta tomando como base la transferencia y sumándole el porcentaje de tarjeta
+    ROUND((costo * (1 + (porcentaje / 100.0))) * (1 + (porcentaje_tarjeta / 100.0)), 2) AS tarjeta_credito,
+    stock,
+    id_productos
+FROM public.ventas_y_finanzas
+ORDER BY nombre_producto ASC;

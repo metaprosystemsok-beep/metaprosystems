@@ -1,0 +1,15 @@
+INSERT INTO "tabla_turnos" (id, fecha, hora, nombre, telefono, detalle)
+VALUES (
+    {{ appsmith.store.id_turno_seleccionado ? Number(appsmith.store.id_turno_seleccionado) : null }},
+    '{{ Input1.text }}'::date,
+    '{{ tabla_turnos.selectedRow.hora }}',
+    '{{ Input3.text }}',
+    '{{ Input4.text }}',
+    '{{ Input5.text }}'
+)
+ON CONFLICT (id) 
+DO UPDATE SET 
+    nombre = EXCLUDED.nombre,
+    telefono = EXCLUDED.telefono,
+    detalle = EXCLUDED.detalle,
+    fecha = EXCLUDED.fecha;

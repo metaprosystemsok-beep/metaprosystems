@@ -1,0 +1,6 @@
+SELECT * 
+FROM "marketing_analytics_v2"
+WHERE LOWER(plataforma) = LOWER('{{ SELEC_PLATAFORMA.selectedOptionLabel }}')
+  AND LEFT("fecha"::text, 10)::date >= '{{ FECHA1.formattedDate }}'::date
+  AND LEFT("fecha"::text, 10)::date <= '{{ FECHA2.formattedDate }}'::date
+ORDER BY fecha DESC;

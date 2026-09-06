@@ -1,0 +1,10 @@
+SELECT
+  *
+FROM
+  public.detalle_de_ventas
+ORDER BY
+  "{{tabla_venta.sortOrder.column || 'id'}}" {{tabla_venta.sortOrder.order !== "desc" ? "" : "DESC"}}
+LIMIT
+  {{tabla_venta.pageSize}}
+OFFSET
+  {{tabla_venta.pageOffset}}

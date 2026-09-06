@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 6,
+  "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+  "buttonColor": "{{ new Date(DatePicker1.value).getDay() === 6 ? '#00FF97' : '#18181b' }}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "hmea0v08rb",
+  "leftColumn": 54,
+  "minWidth": 120,
+  "mobileBottomRow": 39,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 12,
+  "mobileTopRow": 35,
+  "needsErrorInfo": false,
+  "onClick": "(() => { const d = new Date(DatePicker1.value); d.setDate(d.getDate() - d.getDay() + 6); DatePicker1.setValue(d.toISOString().split('T')[0]); Query_calendario.run(); })()",
+  "parentColumnSpace": 19.9375,
+  "parentId": "8ve7yxq0hh",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 60,
+  "text": "SAB",
+  "topRow": 0,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "q1c51e4ioa",
+  "widgetName": "Button1"
+}
