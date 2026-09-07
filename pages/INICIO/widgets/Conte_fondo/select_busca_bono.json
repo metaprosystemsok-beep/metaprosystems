@@ -66,7 +66,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 13,
+  "rightColumn": 15,
   "serverSideFiltering": false,
   "sourceData": "{{ \n  (() => {\n    const datos = busca_bono.data || [];\n    const unicos = [...new Set(datos.map(item => item.bono))].filter(Boolean);\n    return unicos.map(prod => ({ label: prod, value: prod }));\n  })()\n}}",
   "topRow": 18,
