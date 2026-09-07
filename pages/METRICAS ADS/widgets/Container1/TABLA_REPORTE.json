@@ -461,7 +461,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "RIGHT",
+      "horizontalAlignment": "LEFT",
       "id": "fecha",
       "index": 6,
       "isCellEditable": false,
