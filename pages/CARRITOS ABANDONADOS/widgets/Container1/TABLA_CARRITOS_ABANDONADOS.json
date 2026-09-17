@@ -141,6 +141,7 @@
   "parentColumnSpace": 16.859375,
   "parentId": "t3iiy0fteh",
   "parentRowSpace": 10,
+  "primaryColumnId": "id",
   "primaryColumns": {
     "cliente_email": {
       "alias": "cliente_email",

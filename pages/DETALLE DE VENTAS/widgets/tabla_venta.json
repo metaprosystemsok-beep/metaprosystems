@@ -37,7 +37,6 @@
     "id",
     "nombre_cliente",
     "producto_venta",
-    "bono",
     "total_venta",
     "costo_envio",
     "tipo_envio",
@@ -45,9 +44,10 @@
     "telefono",
     "fecha",
     "id_variante",
+    "bono",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1787668819020,
+  "columnUpdatedAt": 1789662892758,
   "columnWidthMap": {
     "bono": 111,
     "fecha": 184,
