@@ -44,12 +44,14 @@
     "total",
     "costo_envio",
     "tipo_envio",
-    "mensaje_enviado"
+    "mensaje_enviado",
+    "EditActions1"
   ],
-  "columnUpdatedAt": 1788183471907,
+  "columnUpdatedAt": 1789838570771,
   "columnWidthMap": {
     "fecha": 170,
-    "id": 111
+    "id": 111,
+    "tipo_envio": 148
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -107,11 +109,32 @@
     },
     {
       "key": "primaryColumns.mensaje_enviado.computedValue"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveButtonColor"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.discardBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -143,6 +166,46 @@
   "parentRowSpace": 10,
   "primaryColumnId": "id",
   "primaryColumns": {
+    "EditActions1": {
+      "alias": "EditActions1",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "editActions",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "discardActionLabel": "Discard",
+      "discardBorderRadius": "{{TABLA_CARRITOS_ABANDONADOS.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "discardButtonColor": "#F22B2B",
+      "discardButtonVariant": "TERTIARY",
+      "discardIconAlign": "left",
+      "enableFilter": true,
+      "enableSort": true,
+      "id": "EditActions1",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardDisabled": "{{TABLA_CARRITOS_ABANDONADOS.processedTableData.map((currentRow, currentIndex) => ( !TABLA_CARRITOS_ABANDONADOS.updatedRowIndices.includes(currentIndex)))}}",
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveDisabled": "{{TABLA_CARRITOS_ABANDONADOS.processedTableData.map((currentRow, currentIndex) => ( !TABLA_CARRITOS_ABANDONADOS.updatedRowIndices.includes(currentIndex)))}}",
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Save / Discard",
+      "notation": "standard",
+      "originalId": "EditActions1",
+      "saveActionLabel": "Save",
+      "saveBorderRadius": "{{TABLA_CARRITOS_ABANDONADOS.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "saveButtonColor": "{{TABLA_CARRITOS_ABANDONADOS.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "saveIconAlign": "left",
+      "sticky": "right",
+      "thousandSeparator": true,
+      "validation": {},
+      "width": 150
+    },
     "cliente_email": {
       "alias": "cliente_email",
       "allowCellWrapping": false,
@@ -386,7 +449,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "#18181b",
-      "columnType": "checkbox",
+      "columnType": "text",
       "computedValue": "{{(() => { const tableData = TABLA_CARRITOS_ABANDONADOS.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"mensaje_enviado\"])) : mensaje_enviado })()}}",
       "currencyCode": "USD",
       "decimals": 0,
@@ -396,12 +459,12 @@
       "horizontalAlignment": "LEFT",
       "id": "mensaje_enviado",
       "index": 11,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "mensaje_enviado",
@@ -556,6 +619,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
+  "showInlineEditingOptionDropdown": true,
   "tableData": "{{carritos_abandonados.data}}",
   "textColor": "#86efac",
   "textSize": "0.875rem",

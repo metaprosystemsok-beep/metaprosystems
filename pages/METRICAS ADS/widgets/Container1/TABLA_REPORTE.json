@@ -49,7 +49,7 @@
     "media_url",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1788632380579,
+  "columnUpdatedAt": 1789685110179,
   "columnWidthMap": {
     "alcance": 129,
     "comentarios": 147,
@@ -102,9 +102,6 @@
       "key": "primaryColumns.fecha.computedValue"
     },
     {
-      "key": "primaryColumns.media_url.computedValue"
-    },
-    {
       "key": "primaryColumns.caption.computedValue"
     },
     {
@@ -136,6 +133,9 @@
     },
     {
       "key": "primaryColumns.adquisicion_click.computedValue"
+    },
+    {
+      "key": "primaryColumns.media_url.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -599,15 +599,15 @@
       "fontStyle": "",
       "horizontalAlignment": "RIGHT",
       "id": "media_url",
-      "index": 7,
-      "isCellEditable": true,
+      "index": 12,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "media_url",
       "notation": "standard",
       "originalId": "media_url",
