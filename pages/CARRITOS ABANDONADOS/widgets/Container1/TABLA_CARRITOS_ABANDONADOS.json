@@ -47,7 +47,7 @@
     "mensaje_enviado",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1789928966275,
+  "columnUpdatedAt": 1789947919748,
   "columnWidthMap": {
     "fecha": 170,
     "id": 111,
@@ -109,6 +109,9 @@
     },
     {
       "key": "primaryColumns.mensaje_enviado.computedValue"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveButtonColor"
     },
     {
       "key": "primaryColumns.EditActions1.saveBorderRadius"
@@ -196,7 +199,7 @@
       "originalId": "EditActions1",
       "saveActionLabel": "Save",
       "saveBorderRadius": "{{TABLA_CARRITOS_ABANDONADOS.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "saveButtonColor": "#22c55e",
+      "saveButtonColor": "{{TABLA_CARRITOS_ABANDONADOS.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "saveIconAlign": "left",
       "sticky": "right",
       "thousandSeparator": true,
@@ -447,7 +450,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "#18181b",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = TABLA_CARRITOS_ABANDONADOS.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"mensaje_enviado\"])) : mensaje_enviado })()}}",
+      "computedValue": "{{(() => { const tableData = TABLA_CARRITOS_ABANDONADOS.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ('')) : '' })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
