@@ -47,7 +47,7 @@
     "mensaje_enviado",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1789838570771,
+  "columnUpdatedAt": 1789928966275,
   "columnWidthMap": {
     "fecha": 170,
     "id": 111,
@@ -109,9 +109,6 @@
     },
     {
       "key": "primaryColumns.mensaje_enviado.computedValue"
-    },
-    {
-      "key": "primaryColumns.EditActions1.saveButtonColor"
     },
     {
       "key": "primaryColumns.EditActions1.saveBorderRadius"
@@ -199,7 +196,7 @@
       "originalId": "EditActions1",
       "saveActionLabel": "Save",
       "saveBorderRadius": "{{TABLA_CARRITOS_ABANDONADOS.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "saveButtonColor": "{{TABLA_CARRITOS_ABANDONADOS.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "saveButtonColor": "#22c55e",
       "saveIconAlign": "left",
       "sticky": "right",
       "thousandSeparator": true,
@@ -398,7 +395,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "id",
       "notation": "standard",
       "originalId": "id",
