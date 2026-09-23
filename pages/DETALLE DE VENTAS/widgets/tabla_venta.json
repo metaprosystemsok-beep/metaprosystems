@@ -48,7 +48,7 @@
     "colorFila",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1790185114204,
+  "columnUpdatedAt": 1790185579431,
   "columnWidthMap": {
     "bono": 111,
     "fecha": 184,
@@ -161,6 +161,9 @@
     },
     {
       "key": "primaryColumns.tipo_envio.cellBackground"
+    },
+    {
+      "key": "primaryColumns.bono.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -199,6 +202,9 @@
     },
     {
       "key": "primaryColumns.tipo_envio.cellBackground"
+    },
+    {
+      "key": "primaryColumns.bono.cellBackground"
     }
   ],
   "dynamicTriggerPathList": [
@@ -294,7 +300,7 @@
       "alias": "bono",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#18181b",
+      "cellBackground": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"bono\"])) : bono })()}}",
       "currencyCode": "USD",
@@ -346,7 +352,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "colorFila",
       "notation": "standard",
       "originalId": "colorFila",
