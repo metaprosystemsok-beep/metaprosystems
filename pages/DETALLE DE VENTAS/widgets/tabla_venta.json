@@ -45,9 +45,10 @@
     "fecha",
     "id_variante",
     "bono",
+    "colorFila",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1789662892758,
+  "columnUpdatedAt": 1790185114204,
   "columnWidthMap": {
     "bono": 111,
     "fecha": 184,
@@ -76,9 +77,6 @@
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "tableData"
     },
     {
       "key": "totalRecordsCount"
@@ -130,6 +128,39 @@
     },
     {
       "key": "primaryColumns.bono.computedValue"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.colorFila.computedValue"
+    },
+    {
+      "key": "primaryColumns.id.cellBackground"
+    },
+    {
+      "key": "primaryColumns.fecha.cellBackground"
+    },
+    {
+      "key": "primaryColumns.telefono.cellBackground"
+    },
+    {
+      "key": "primaryColumns.mail.cellBackground"
+    },
+    {
+      "key": "primaryColumns.nombre_cliente.cellBackground"
+    },
+    {
+      "key": "primaryColumns.producto_venta.cellBackground"
+    },
+    {
+      "key": "primaryColumns.total_venta.cellBackground"
+    },
+    {
+      "key": "primaryColumns.costo_envio.cellBackground"
+    },
+    {
+      "key": "primaryColumns.tipo_envio.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -141,6 +172,33 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.id.cellBackground"
+    },
+    {
+      "key": "primaryColumns.fecha.cellBackground"
+    },
+    {
+      "key": "primaryColumns.telefono.cellBackground"
+    },
+    {
+      "key": "primaryColumns.mail.cellBackground"
+    },
+    {
+      "key": "primaryColumns.nombre_cliente.cellBackground"
+    },
+    {
+      "key": "primaryColumns.producto_venta.cellBackground"
+    },
+    {
+      "key": "primaryColumns.total_venta.cellBackground"
+    },
+    {
+      "key": "primaryColumns.costo_envio.cellBackground"
+    },
+    {
+      "key": "primaryColumns.tipo_envio.cellBackground"
     }
   ],
   "dynamicTriggerPathList": [
@@ -266,11 +324,45 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "colorFila": {
+      "alias": "colorFila",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "#18181b",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"colorFila\"])) : colorFila })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "colorFila",
+      "index": 11,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "colorFila",
+      "notation": "standard",
+      "originalId": "colorFila",
+      "sticky": "",
+      "textColor": "#86efac",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "costo_envio": {
       "alias": "costo_envio",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#18181b",
+      "cellBackground": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"costo_envio\"])) : costo_envio })()}}",
       "currencyCode": "USD",
@@ -304,7 +396,7 @@
       "alias": "fecha",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#18181b",
+      "cellBackground": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"fecha\"])) : fecha })()}}",
       "currencyCode": "USD",
@@ -338,7 +430,7 @@
       "alias": "id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#18181b",
+      "cellBackground": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
       "currencyCode": "USD",
@@ -406,7 +498,7 @@
       "alias": "mail",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#18181b",
+      "cellBackground": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"mail\"])) : mail })()}}",
       "currencyCode": "USD",
@@ -440,7 +532,7 @@
       "alias": "nombre_cliente",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#18181b",
+      "cellBackground": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"nombre_cliente\"])) : nombre_cliente })()}}",
       "currencyCode": "USD",
@@ -474,7 +566,7 @@
       "alias": "producto_venta",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#18181b",
+      "cellBackground": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"producto_venta\"])) : producto_venta })()}}",
       "currencyCode": "USD",
@@ -508,7 +600,7 @@
       "alias": "telefono",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#18181b",
+      "cellBackground": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"telefono\"])) : telefono })()}}",
       "currencyCode": "USD",
@@ -542,7 +634,7 @@
       "alias": "tipo_envio",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#18181b",
+      "cellBackground": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"tipo_envio\"])) : tipo_envio })()}}",
       "currencyCode": "USD",
@@ -576,7 +668,7 @@
       "alias": "total_venta",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#18181b",
+      "cellBackground": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = tabla_venta.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"total_venta\"])) : total_venta })()}}",
       "currencyCode": "USD",
@@ -613,7 +705,7 @@
   "searchKey": "",
   "serverSidePaginationEnabled": true,
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{Select_public_detalle_de_ventas1.data}}",
+  "tableData": "{{ JSObject1.obtenerDatosConColor.data }}",
   "textColor": "#86efac",
   "textSize": "0.875rem",
   "topRow": 1,

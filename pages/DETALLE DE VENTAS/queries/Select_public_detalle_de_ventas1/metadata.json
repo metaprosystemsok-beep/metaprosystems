@@ -29,7 +29,7 @@
     ],
     "name": "Select_public_detalle_de_ventas1",
     "pageId": "DETALLE DE VENTAS",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
