@@ -29,7 +29,7 @@
     ],
     "name": "Select_public_base_clientes1",
     "pageId": "BASE CLIENTES",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
