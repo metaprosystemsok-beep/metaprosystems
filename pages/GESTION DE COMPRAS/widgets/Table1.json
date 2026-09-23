@@ -109,6 +109,27 @@
     },
     {
       "key": "primaryColumns.total_general_orden.cellBackground"
+    },
+    {
+      "key": "primaryColumns.id_transaccion.cellBackground"
+    },
+    {
+      "key": "primaryColumns.fecha.cellBackground"
+    },
+    {
+      "key": "primaryColumns.nombre_empresa.cellBackground"
+    },
+    {
+      "key": "primaryColumns.nombre_producto.cellBackground"
+    },
+    {
+      "key": "primaryColumns.cantidad.cellBackground"
+    },
+    {
+      "key": "primaryColumns.precio_unitario.cellBackground"
+    },
+    {
+      "key": "primaryColumns.subtotal.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -123,6 +144,24 @@
     },
     {
       "key": "primaryColumns.total_general_orden.cellBackground"
+    },
+    {
+      "key": "primaryColumns.fecha.cellBackground"
+    },
+    {
+      "key": "primaryColumns.nombre_empresa.cellBackground"
+    },
+    {
+      "key": "primaryColumns.nombre_producto.cellBackground"
+    },
+    {
+      "key": "primaryColumns.cantidad.cellBackground"
+    },
+    {
+      "key": "primaryColumns.precio_unitario.cellBackground"
+    },
+    {
+      "key": "primaryColumns.subtotal.cellBackground"
     }
   ],
   "dynamicTriggerPathList": [
@@ -165,7 +204,7 @@
       "alias": "cantidad",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"cantidad\"])) : cantidad })()}}",
       "currencyCode": "USD",
@@ -233,7 +272,7 @@
       "alias": "fecha",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"fecha\"])) : fecha })()}}",
       "currencyCode": "USD",
@@ -301,7 +340,7 @@
       "alias": "id_transaccion",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id_transaccion\"])) : id_transaccion })()}}",
       "currencyCode": "USD",
@@ -335,7 +374,7 @@
       "alias": "nombre_empresa",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"nombre_empresa\"])) : nombre_empresa })()}}",
       "currencyCode": "USD",
@@ -369,7 +408,7 @@
       "alias": "nombre_producto",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"nombre_producto\"])) : nombre_producto })()}}",
       "currencyCode": "USD",
@@ -403,7 +442,7 @@
       "alias": "precio_unitario",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"precio_unitario\"])) : precio_unitario })()}}",
       "currencyCode": "USD",
@@ -437,7 +476,7 @@
       "alias": "subtotal",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"subtotal\"])) : subtotal })()}}",
       "currencyCode": "USD",
