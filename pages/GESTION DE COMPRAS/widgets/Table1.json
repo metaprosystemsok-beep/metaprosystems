@@ -44,7 +44,7 @@
     "total_general_orden",
     "colorFila"
   ],
-  "columnUpdatedAt": 1790128337713,
+  "columnUpdatedAt": 1790128984163,
   "columnWidthMap": {
     "cantidad": 104,
     "fecha": 178,
@@ -217,7 +217,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "colorFila",
       "notation": "standard",
       "originalId": "colorFila",
