@@ -29,7 +29,7 @@
     ],
     "name": "Select_public_gestion_compras1",
     "pageId": "GESTION DE COMPRAS",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

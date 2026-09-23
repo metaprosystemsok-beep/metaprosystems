@@ -7,19 +7,25 @@
   "closeOnSelection": true,
   "dateFormat": "YYYY-MM-DD",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "2026-08-25T18:52:01.091Z",
+  "defaultDate": "{{moment().toDate()}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultDate"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "onDateSelected"
+    },
+    {
+      "key": "defaultDate"
     }
   ],
   "dynamicTriggerPathList": [

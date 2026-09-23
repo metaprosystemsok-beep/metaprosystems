@@ -4,11 +4,11 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 89,
+  "bottomRow": 93,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
-  "cellBackground": "{{\n  (() => {\n    // Definimos una paleta de colores para las distintas órdenes\n    const colores = [\"#0f172a\", \"#1e293b\", \"#334155\", \"#475569\"];\n    \n    // Obtenemos todos los IDs de transacción únicos que hay en la tabla\n    const todosLosIds = [...new Set(Table1.tableData.map(item => item.id_transaccion))];\n    \n    // Buscamos el ID de la fila actual (usando el índice de la fila)\n    // Nota: 'this' en el contexto de Cell background color se refiere a la fila actual\n    const idFilaActual = this.id_transaccion;\n    \n    // Obtenemos el índice del ID actual para asignarle un color de la paleta\n    const indiceColor = todosLosIds.indexOf(idFilaActual);\n    \n    return colores[indiceColor % colores.length];\n  })()\n}}",
+  "cellBackground": "",
   "childStylesheet": {
     "button": {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -41,9 +41,10 @@
     "cantidad",
     "precio_unitario",
     "subtotal",
-    "total_general_orden"
+    "total_general_orden",
+    "colorFila"
   ],
-  "columnUpdatedAt": 1786918177773,
+  "columnUpdatedAt": 1790128337713,
   "columnWidthMap": {
     "cantidad": 104,
     "fecha": 178,
@@ -69,9 +70,6 @@
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "tableData"
     },
     {
       "key": "totalRecordsCount"
@@ -104,31 +102,10 @@
       "key": "primaryColumns.total_general_orden.computedValue"
     },
     {
-      "key": "cellBackground"
+      "key": "primaryColumns.colorFila.computedValue"
     },
     {
-      "key": "primaryColumns.id.cellBackground"
-    },
-    {
-      "key": "primaryColumns.id_transaccion.cellBackground"
-    },
-    {
-      "key": "primaryColumns.fecha.cellBackground"
-    },
-    {
-      "key": "primaryColumns.nombre_empresa.cellBackground"
-    },
-    {
-      "key": "primaryColumns.nombre_producto.cellBackground"
-    },
-    {
-      "key": "primaryColumns.cantidad.cellBackground"
-    },
-    {
-      "key": "primaryColumns.precio_unitario.cellBackground"
-    },
-    {
-      "key": "primaryColumns.subtotal.cellBackground"
+      "key": "tableData"
     },
     {
       "key": "primaryColumns.total_general_orden.cellBackground"
@@ -137,6 +114,15 @@
   "dynamicPropertyPathList": [
     {
       "key": "cellBackground"
+    },
+    {
+      "key": "primaryColumns.id_transaccion.cellBackground"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.total_general_orden.cellBackground"
     }
   ],
   "dynamicTriggerPathList": [
@@ -179,7 +165,7 @@
       "alias": "cantidad",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{\n  (() => {\n    // Definimos una paleta de colores para las distintas órdenes\n    const colores = [\"#0f172a\", \"#1e293b\", \"#334155\", \"#475569\"];\n    \n    // Obtenemos todos los IDs de transacción únicos que hay en la tabla\n    const todosLosIds = [...new Set(Table1.tableData.map(item => item.id_transaccion))];\n    \n    // Buscamos el ID de la fila actual (usando el índice de la fila)\n    // Nota: 'this' en el contexto de Cell background color se refiere a la fila actual\n    const idFilaActual = this.id_transaccion;\n    \n    // Obtenemos el índice del ID actual para asignarle un color de la paleta\n    const indiceColor = todosLosIds.indexOf(idFilaActual);\n    \n    return colores[indiceColor % colores.length];\n  })()\n}}",
+      "cellBackground": "",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"cantidad\"])) : cantidad })()}}",
       "currencyCode": "USD",
@@ -209,11 +195,45 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "colorFila": {
+      "alias": "colorFila",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"colorFila\"])) : colorFila })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "colorFila",
+      "index": 9,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "colorFila",
+      "notation": "standard",
+      "originalId": "colorFila",
+      "sticky": "",
+      "textColor": "#22c55e",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "fecha": {
       "alias": "fecha",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{\n  (() => {\n    // Definimos una paleta de colores para las distintas órdenes\n    const colores = [\"#0f172a\", \"#1e293b\", \"#334155\", \"#475569\"];\n    \n    // Obtenemos todos los IDs de transacción únicos que hay en la tabla\n    const todosLosIds = [...new Set(Table1.tableData.map(item => item.id_transaccion))];\n    \n    // Buscamos el ID de la fila actual (usando el índice de la fila)\n    // Nota: 'this' en el contexto de Cell background color se refiere a la fila actual\n    const idFilaActual = this.id_transaccion;\n    \n    // Obtenemos el índice del ID actual para asignarle un color de la paleta\n    const indiceColor = todosLosIds.indexOf(idFilaActual);\n    \n    return colores[indiceColor % colores.length];\n  })()\n}}",
+      "cellBackground": "",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"fecha\"])) : fecha })()}}",
       "currencyCode": "USD",
@@ -247,7 +267,7 @@
       "alias": "id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{\n  (() => {\n    // Definimos una paleta de colores para las distintas órdenes\n    const colores = [\"#0f172a\", \"#1e293b\", \"#334155\", \"#475569\"];\n    \n    // Obtenemos todos los IDs de transacción únicos que hay en la tabla\n    const todosLosIds = [...new Set(Table1.tableData.map(item => item.id_transaccion))];\n    \n    // Buscamos el ID de la fila actual (usando el índice de la fila)\n    // Nota: 'this' en el contexto de Cell background color se refiere a la fila actual\n    const idFilaActual = this.id_transaccion;\n    \n    // Obtenemos el índice del ID actual para asignarle un color de la paleta\n    const indiceColor = todosLosIds.indexOf(idFilaActual);\n    \n    return colores[indiceColor % colores.length];\n  })()\n}}",
+      "cellBackground": "",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
       "currencyCode": "USD",
@@ -281,7 +301,7 @@
       "alias": "id_transaccion",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{\n  (() => {\n    // Definimos una paleta de colores para las distintas órdenes\n    const colores = [\"#0f172a\", \"#1e293b\", \"#334155\", \"#475569\"];\n    \n    // Obtenemos todos los IDs de transacción únicos que hay en la tabla\n    const todosLosIds = [...new Set(Table1.tableData.map(item => item.id_transaccion))];\n    \n    // Buscamos el ID de la fila actual (usando el índice de la fila)\n    // Nota: 'this' en el contexto de Cell background color se refiere a la fila actual\n    const idFilaActual = this.id_transaccion;\n    \n    // Obtenemos el índice del ID actual para asignarle un color de la paleta\n    const indiceColor = todosLosIds.indexOf(idFilaActual);\n    \n    return colores[indiceColor % colores.length];\n  })()\n}}",
+      "cellBackground": "",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id_transaccion\"])) : id_transaccion })()}}",
       "currencyCode": "USD",
@@ -315,7 +335,7 @@
       "alias": "nombre_empresa",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{\n  (() => {\n    // Definimos una paleta de colores para las distintas órdenes\n    const colores = [\"#0f172a\", \"#1e293b\", \"#334155\", \"#475569\"];\n    \n    // Obtenemos todos los IDs de transacción únicos que hay en la tabla\n    const todosLosIds = [...new Set(Table1.tableData.map(item => item.id_transaccion))];\n    \n    // Buscamos el ID de la fila actual (usando el índice de la fila)\n    // Nota: 'this' en el contexto de Cell background color se refiere a la fila actual\n    const idFilaActual = this.id_transaccion;\n    \n    // Obtenemos el índice del ID actual para asignarle un color de la paleta\n    const indiceColor = todosLosIds.indexOf(idFilaActual);\n    \n    return colores[indiceColor % colores.length];\n  })()\n}}",
+      "cellBackground": "",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"nombre_empresa\"])) : nombre_empresa })()}}",
       "currencyCode": "USD",
@@ -349,7 +369,7 @@
       "alias": "nombre_producto",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{\n  (() => {\n    // Definimos una paleta de colores para las distintas órdenes\n    const colores = [\"#0f172a\", \"#1e293b\", \"#334155\", \"#475569\"];\n    \n    // Obtenemos todos los IDs de transacción únicos que hay en la tabla\n    const todosLosIds = [...new Set(Table1.tableData.map(item => item.id_transaccion))];\n    \n    // Buscamos el ID de la fila actual (usando el índice de la fila)\n    // Nota: 'this' en el contexto de Cell background color se refiere a la fila actual\n    const idFilaActual = this.id_transaccion;\n    \n    // Obtenemos el índice del ID actual para asignarle un color de la paleta\n    const indiceColor = todosLosIds.indexOf(idFilaActual);\n    \n    return colores[indiceColor % colores.length];\n  })()\n}}",
+      "cellBackground": "",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"nombre_producto\"])) : nombre_producto })()}}",
       "currencyCode": "USD",
@@ -383,7 +403,7 @@
       "alias": "precio_unitario",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{\n  (() => {\n    // Definimos una paleta de colores para las distintas órdenes\n    const colores = [\"#0f172a\", \"#1e293b\", \"#334155\", \"#475569\"];\n    \n    // Obtenemos todos los IDs de transacción únicos que hay en la tabla\n    const todosLosIds = [...new Set(Table1.tableData.map(item => item.id_transaccion))];\n    \n    // Buscamos el ID de la fila actual (usando el índice de la fila)\n    // Nota: 'this' en el contexto de Cell background color se refiere a la fila actual\n    const idFilaActual = this.id_transaccion;\n    \n    // Obtenemos el índice del ID actual para asignarle un color de la paleta\n    const indiceColor = todosLosIds.indexOf(idFilaActual);\n    \n    return colores[indiceColor % colores.length];\n  })()\n}}",
+      "cellBackground": "",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"precio_unitario\"])) : precio_unitario })()}}",
       "currencyCode": "USD",
@@ -417,7 +437,7 @@
       "alias": "subtotal",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{\n  (() => {\n    // Definimos una paleta de colores para las distintas órdenes\n    const colores = [\"#0f172a\", \"#1e293b\", \"#334155\", \"#475569\"];\n    \n    // Obtenemos todos los IDs de transacción únicos que hay en la tabla\n    const todosLosIds = [...new Set(Table1.tableData.map(item => item.id_transaccion))];\n    \n    // Buscamos el ID de la fila actual (usando el índice de la fila)\n    // Nota: 'this' en el contexto de Cell background color se refiere a la fila actual\n    const idFilaActual = this.id_transaccion;\n    \n    // Obtenemos el índice del ID actual para asignarle un color de la paleta\n    const indiceColor = todosLosIds.indexOf(idFilaActual);\n    \n    return colores[indiceColor % colores.length];\n  })()\n}}",
+      "cellBackground": "",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"subtotal\"])) : subtotal })()}}",
       "currencyCode": "USD",
@@ -451,7 +471,7 @@
       "alias": "total_general_orden",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{\n  (() => {\n    // Definimos una paleta de colores para las distintas órdenes\n    const colores = [\"#0f172a\", \"#1e293b\", \"#334155\", \"#475569\"];\n    \n    // Obtenemos todos los IDs de transacción únicos que hay en la tabla\n    const todosLosIds = [...new Set(Table1.tableData.map(item => item.id_transaccion))];\n    \n    // Buscamos el ID de la fila actual (usando el índice de la fila)\n    // Nota: 'this' en el contexto de Cell background color se refiere a la fila actual\n    const idFilaActual = this.id_transaccion;\n    \n    // Obtenemos el índice del ID actual para asignarle un color de la paleta\n    const indiceColor = todosLosIds.indexOf(idFilaActual);\n    \n    return colores[indiceColor % colores.length];\n  })()\n}}",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.colorFila )) :  currentRow.colorFila  })()}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"total_general_orden\"])) : total_general_orden })()}}",
       "currencyCode": "USD",
@@ -484,10 +504,10 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 63,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
-  "tableData": "{{Select_public_gestion_compras1.data}}",
+  "tableData": "{{ JSObject1.obtenerDatosConColor.data }}",
   "textColor": "#22c55e",
   "textSize": "0.875rem",
   "topRow": 0,
