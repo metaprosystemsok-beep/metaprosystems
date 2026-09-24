@@ -33,8 +33,8 @@
     }
   },
   "columnOrder": [
-    "cliente_email",
     "id",
+    "cliente_email",
     "fecha",
     "cliente_nombre",
     "cliente_telefono",
@@ -46,7 +46,7 @@
     "tipo_envio",
     "mensaje_enviado"
   ],
-  "columnUpdatedAt": 1790019472138,
+  "columnUpdatedAt": 1790200891012,
   "columnWidthMap": {
     "fecha": 170,
     "id": 111,
@@ -387,7 +387,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "#18181b",
-      "columnType": "text",
+      "columnType": "checkbox",
       "computedValue": "{{(() => { const tableData = TABLA_CARRITOS_ABANDONADOS.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ('')) : '' })()}}",
       "currencyCode": "USD",
       "decimals": 0,
