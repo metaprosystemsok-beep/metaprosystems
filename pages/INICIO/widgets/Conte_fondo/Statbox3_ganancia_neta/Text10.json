@@ -43,7 +43,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 59,
   "shouldTruncate": false,
   "text": "{{ ganancia_neta.data[0].total || 0 }}",
   "textAlign": "CENTER",
