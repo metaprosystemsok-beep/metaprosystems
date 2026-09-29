@@ -2,7 +2,7 @@
   "animateLoading": true,
   "backgroundColor": "#18181b",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 73,
+  "bottomRow": 71,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -39,7 +39,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 28,
+  "rightColumn": 31,
   "shouldTruncate": false,
   "text": "AUDITORÍA DE SISTEMA (CONTROL ESTRATÉGICO)",
   "textAlign": "LEFT",
