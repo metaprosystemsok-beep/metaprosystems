@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a3ae2b905dd9b2f221ae850_8bac516c-bd16-41ee-88d1-73a39234ff8b",
-  "id": "MENSAJERIA_Query_tabla_turnos",
+  "gitSyncId": "6a3ae2b905dd9b2f221ae850_b47bf038-e4b5-4525-92e0-dd070d30efe9",
+  "id": "METRICAS ADS_Query1",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id, hora, detalle, nombre, telefono, fecha\nFROM tabla_turnos \nORDER BY id ASC\nLIMIT {{tabla_turnos.pageSize}}\nOFFSET {{tabla_turnos.pageOffset}}",
+      "body": "CREATE INDEX idx_marketing_analytics_v2_id ON public.marketing_analytics_v2 (id);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,13 +22,9 @@
       "name": "metaprosystems",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "Query_tabla_turnos",
-    "pageId": "MENSAJERIA",
+    "dynamicBindingPathList": [],
+    "name": "Query1",
+    "pageId": "METRICAS ADS",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

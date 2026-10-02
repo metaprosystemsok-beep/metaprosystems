@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    id,\n    fecha,\n    cliente_nombre,\n    cliente_email,\n    cliente_telefono,\n    localidad_envio,\n    provincia_envio,\n    producto,\n    total,\n    costo_envio,\n    tipo_envio,\n\t\tmensaje_enviado\nFROM carritos_abandonados\nORDER BY fecha DESC;",
+      "body": "SELECT \n    id,\n    fecha,\n    cliente_nombre,\n    cliente_email,\n    cliente_telefono,\n    localidad_envio,\n    provincia_envio,\n    producto,\n    total,\n    costo_envio,\n    tipo_envio,\n\t\tmensaje_enviado\nFROM carritos_abandonados\nORDER BY fecha DESC\nLIMIT {{carritos_abandonados.pageSize}}\nOFFSET {{carritos_abandonados.pageOffset}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,7 +22,11 @@
       "name": "metaprosystems",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "name": "carritos_abandonados",
     "pageId": "CARRITOS ABANDONADOS",
     "runBehaviour": "AUTOMATIC",

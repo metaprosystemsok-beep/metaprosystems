@@ -1,3 +1,5 @@
 SELECT id, hora, detalle, nombre, telefono, fecha
 FROM tabla_turnos 
-ORDER BY id ASC;
+ORDER BY id ASC
+LIMIT {{tabla_turnos.pageSize}}
+OFFSET {{tabla_turnos.pageOffset}}

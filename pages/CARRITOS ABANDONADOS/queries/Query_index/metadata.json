@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a3ae2b905dd9b2f221ae850_8bac516c-bd16-41ee-88d1-73a39234ff8b",
-  "id": "MENSAJERIA_Query_tabla_turnos",
+  "gitSyncId": "6a3ae2b905dd9b2f221ae850_5ccccc5a-155b-44bb-b225-1ffd05440472",
+  "id": "CARRITOS ABANDONADOS_Query_index",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id, hora, detalle, nombre, telefono, fecha\nFROM tabla_turnos \nORDER BY id ASC\nLIMIT {{tabla_turnos.pageSize}}\nOFFSET {{tabla_turnos.pageOffset}}",
+      "body": "CREATE INDEX idx_carritos_abandonados_id ON public.carritos_abandonados (id);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,13 +22,9 @@
       "name": "metaprosystems",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "Query_tabla_turnos",
-    "pageId": "MENSAJERIA",
+    "dynamicBindingPathList": [],
+    "name": "Query_index",
+    "pageId": "CARRITOS ABANDONADOS",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

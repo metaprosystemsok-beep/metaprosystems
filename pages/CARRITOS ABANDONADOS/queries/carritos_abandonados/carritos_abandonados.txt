@@ -12,4 +12,6 @@ SELECT
     tipo_envio,
 		mensaje_enviado
 FROM carritos_abandonados
-ORDER BY fecha DESC;
+ORDER BY fecha DESC
+LIMIT {{carritos_abandonados.pageSize}}
+OFFSET {{carritos_abandonados.pageOffset}}
