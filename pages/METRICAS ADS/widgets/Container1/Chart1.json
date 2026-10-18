@@ -1,0 +1,110 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 58,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "wtim6fo21b": {
+      "color": "#22c55e",
+      "data": "[\n  {\n    \"x\": \"META ADS\",\n    \"y\": 20000\n  },\n  {\n    \"x\": \"INSTAGRAM\",\n    \"y\": 22000\n  },\n  {\n    \"x\": \"FACEBOOK\",\n    \"y\": 32000\n  },\n  {\n    \"x\": \"TIKTOK\",\n    \"y\": 32000\n  }\n]",
+      "seriesName": "2026"
+    }
+  },
+  "chartName": "METRICAS ",
+  "chartType": "COLUMN_CHART",
+  "customEChartConfig": "{{\n{\n  \"dataset\": {\n    \"source\": [\n      [\n        \"Day\",\n        \"Baidu\",\n        \"Google\",\n        \"Bing\"\n      ],\n      [\n        \"Mon\",\n        620,\n        120,\n        60\n      ],\n      [\n        \"Tue\",\n        732,\n        132,\n        72\n      ],\n      [\n        \"Wed\",\n        701,\n        101,\n        71\n      ],\n      [\n        \"Thu\",\n        734,\n        134,\n        74\n      ],\n      [\n        \"Fri\",\n        1090,\n        290,\n        190\n      ],\n      [\n        \"Sat\",\n        1130,\n        230,\n        130\n      ],\n      [\n        \"Sun\",\n        1120,\n        220,\n        110\n      ]\n    ]\n  },\n  \"tooltip\": {\n    \"trigger\": \"axis\",\n    \"axisPointer\": {\n      \"type\": \"shadow\"\n    }\n  },\n  \"title\": {\n    \"text\": \"Search Engine Usage\",\n    \"left\": \"center\",\n    \"textStyle\": {\n      \"width\": 200,\n      \"overflow\": \"truncate\"\n    }\n  },\n  \"legend\": {\n    \"top\": 40,\n    \"type\": \"scroll\"\n  },\n  \"grid\": {\n    \"left\": 15,\n    \"right\": 15,\n    \"bottom\": 30,\n    \"top\": 100,\n    \"containLabel\": true\n  },\n  \"xAxis\": [\n    {\n      \"type\": \"category\"\n    }\n  ],\n  \"yAxis\": [\n    {\n      \"type\": \"value\"\n    }\n  ],\n  \"series\": [\n    {\n      \"type\": \"bar\",\n      \"stack\": \"Search Engine\"\n    },\n    {\n      \"type\": \"bar\",\n      \"stack\": \"Search Engine\"\n    },\n    {\n      \"type\": \"bar\",\n      \"stack\": \"Search Engine\"\n    }\n  ]\n}\n}}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "customEChartConfig"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "mttn84bm1v",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 58,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 10,
+  "mobileTopRow": 26,
+  "needsErrorInfo": true,
+  "parentColumnSpace": 16.546875,
+  "parentId": "iidhn0i0uk",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "showDataPointLabel": false,
+  "topRow": 25,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "e0qyijhf5c",
+  "widgetName": "Chart1",
+  "xAxisName": "PLATAFLORMAS",
+  "yAxisName": "MEDICIÓN"
+}
