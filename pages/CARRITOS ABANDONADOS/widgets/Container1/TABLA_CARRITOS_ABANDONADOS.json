@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 89,
+  "bottomRow": 72,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -46,7 +46,7 @@
     "tipo_envio",
     "mensaje_enviado"
   ],
-  "columnUpdatedAt": 1790954610524,
+  "columnUpdatedAt": 1792858847348,
   "columnWidthMap": {
     "fecha": 170,
     "id": 111,
@@ -561,7 +561,7 @@
   "tableData": "{{carritos_abandonados.data}}",
   "textColor": "#86efac",
   "textSize": "0.875rem",
-  "topRow": 10,
+  "topRow": 16,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

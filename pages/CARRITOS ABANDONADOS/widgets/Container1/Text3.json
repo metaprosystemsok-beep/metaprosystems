@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 8,
+  "bottomRow": 6,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -24,7 +24,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "avoyx7iind",
-  "leftColumn": 0,
+  "leftColumn": 24,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -35,16 +35,16 @@
   "needsErrorInfo": false,
   "overflow": "NONE",
   "parentColumnSpace": 8.47802734375,
-  "parentId": "ln71gatwll",
+  "parentId": "t3iiy0fteh",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 18,
+  "rightColumn": 42,
   "shouldTruncate": false,
   "text": "{{ Query2.data[0].cantidad || 0 }} carritos",
   "textAlign": "LEFT",
   "textColor": "#86efac",
-  "topRow": 0,
+  "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

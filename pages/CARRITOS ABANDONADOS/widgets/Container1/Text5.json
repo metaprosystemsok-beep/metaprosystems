@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 15,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -24,7 +24,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "qurkelrjtl",
-  "leftColumn": 25,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -34,18 +34,18 @@
   "mobileTopRow": 4,
   "needsErrorInfo": false,
   "overflow": "NONE",
-  "parentId": "ln71gatwll",
+  "parentId": "t3iiy0fteh",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
+  "rightColumn": 20,
   "shouldTruncate": false,
-  "text": "{{ Query1.data[0].total || 0 }}",
+  "text": "{{ facturacion_bruta.data[0].total || 0 }}",
   "textAlign": "LEFT",
-  "textColor": "#86efac",
-  "topRow": 1,
+  "textColor": "#22c55e",
+  "topRow": 9,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
   "widgetId": "zgkufqk2uu",
-  "widgetName": "Text2"
+  "widgetName": "Text5"
 }

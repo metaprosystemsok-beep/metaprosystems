@@ -56,7 +56,7 @@
   "mobileRightColumn": 10,
   "mobileTopRow": 11,
   "needsErrorInfo": false,
-  "onDateSelected": "{{costo_operativo.run();\nfacturacion_bruta.run();\nganancia_neta.run()}}",
+  "onDateSelected": "{{costo_operativo.run()\nfacturacion_bruta.run();\nganancia_neta.run();}}",
   "parentColumnSpace": 5.116943359375,
   "parentId": "i26vksivp7",
   "parentRowSpace": 10,

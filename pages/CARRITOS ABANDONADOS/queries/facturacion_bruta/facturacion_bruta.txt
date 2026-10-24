@@ -1,0 +1,10 @@
+SELECT SUM(total_venta) as total
+FROM detalle_de_ventas
+WHERE CAST(fecha AS DATE) BETWEEN 
+      CAST('{{DatePicker3.selectedDate}}' AS DATE) 
+      AND 
+      CAST('{{DatePicker4.selectedDate}}' AS DATE)
+  AND (
+       '{{select_busca_bono.selectedOptionValue}}' = '' 
+    OR bono = '{{select_busca_bono.selectedOptionValue}}'
+)  
