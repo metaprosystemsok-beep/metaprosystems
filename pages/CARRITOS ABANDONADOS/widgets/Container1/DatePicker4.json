@@ -39,7 +39,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "fr50u3fc24",
-  "label": "bucar por fecha",
+  "label": "hasta",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelTextColor": "#22c55e",

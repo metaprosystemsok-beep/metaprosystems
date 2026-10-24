@@ -39,7 +39,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "fr50u3fc24",
-  "label": "buscar por fecha",
+  "label": "desde",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelTextColor": "#22c55e",

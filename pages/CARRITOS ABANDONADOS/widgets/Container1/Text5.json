@@ -41,7 +41,7 @@
   "shouldTruncate": false,
   "text": "{{ facturacion_bruta.data[0].total || 0 }}",
   "textAlign": "LEFT",
-  "textColor": "#22c55e",
+  "textColor": "#86efac",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
