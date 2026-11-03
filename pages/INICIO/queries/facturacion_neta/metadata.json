@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6a3ae2b905dd9b2f221ae850_12b14445-bce1-4172-8500-8f14877b37ef",
-  "id": "INICIO_facturacion_bruta",
+  "id": "INICIO_facturacion_neta",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "facturacion_bruta",
+    "name": "facturacion_neta",
     "pageId": "INICIO",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

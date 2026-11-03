@@ -1,4 +1,4 @@
-SELECT SUM(total_venta - costo_envio) as total
+SELECT SUM(total_venta + costo_envio) as total
 FROM detalle_de_ventas
 WHERE CAST(fecha AS DATE) BETWEEN 
       CAST('{{DatePicker1.selectedDate}}' AS DATE) 

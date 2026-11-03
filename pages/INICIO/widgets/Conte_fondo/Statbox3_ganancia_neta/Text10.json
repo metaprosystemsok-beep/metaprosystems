@@ -45,7 +45,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 59,
   "shouldTruncate": false,
-  "text": "{{ ganancia_neta.data[0].total || 0 }}",
+  "text": "{{ ganancia_bruta.data[0].total || 0 }}",
   "textAlign": "CENTER",
   "textColor": "#00ff97",
   "topRow": 5,

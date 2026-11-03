@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "{{ facturacion_bruta.data[0].total || 0 }}",
+  "text": "{{ facturacion_neta.data[0].total || 0 }}",
   "textAlign": "CENTER",
   "textColor": "#00d4ff",
   "topRow": 5,
