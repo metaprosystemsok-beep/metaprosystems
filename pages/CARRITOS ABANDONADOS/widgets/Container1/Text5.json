@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
+  "bottomRow": 7,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -37,7 +37,7 @@
   "parentId": "t3iiy0fteh",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 20,
+  "rightColumn": 19,
   "shouldTruncate": false,
   "text": "{{ facturacion_bruta.data[0].total || 0 }}",
   "textAlign": "LEFT",

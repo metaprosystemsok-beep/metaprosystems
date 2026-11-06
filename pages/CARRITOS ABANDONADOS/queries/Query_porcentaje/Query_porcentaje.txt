@@ -1,0 +1,24 @@
+WITH ventas AS (
+    SELECT COALESCE(SUM(total_venta), 0) AS total_ventas
+    FROM detalle_de_ventas
+    WHERE CAST(fecha AS DATE) BETWEEN CAST('{{DatePicker3.selectedDate}}' AS DATE) 
+      AND CAST('{{DatePicker4.selectedDate}}' AS DATE)
+      AND (
+          '{{select_busca_bono.selectedOptionValue}}' = '' 
+          OR bono = '{{select_busca_bono.selectedOptionValue}}'
+      )
+),
+carritos AS (
+    SELECT COALESCE(SUM(total), 0) AS total_carritos
+    FROM carritos_abandonados
+    WHERE CAST(fecha AS DATE) BETWEEN CAST('{{DatePicker1.selectedDate}}' AS DATE) 
+      AND CAST('{{DatePicker2.selectedDate}}' AS DATE)
+)
+SELECT 
+    v.total_ventas,
+    c.total_carritos,
+    CASE 
+        WHEN c.total_carritos = 0 THEN 0
+        ELSE ROUND((v.total_ventas / c.total_carritos) * 100, 2)
+    END AS porcentaje
+FROM ventas v, carritos c;
