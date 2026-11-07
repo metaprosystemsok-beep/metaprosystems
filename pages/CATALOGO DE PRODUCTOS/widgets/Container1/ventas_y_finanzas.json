@@ -50,12 +50,12 @@
     "costo": 111,
     "customColumn1": 106,
     "id": 124,
-    "nombre_producto": 62,
-    "porcentaje": 113,
-    "porcentaje_tarjeta": 92,
-    "stock": 62,
+    "nombre_producto": 446,
+    "porcentaje": 116,
+    "porcentaje_tarjeta": 110,
+    "stock": 95,
     "tarjeta_credito": 138,
-    "transferencia_efectivo": 98
+    "transferencia_efectivo": 99
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
