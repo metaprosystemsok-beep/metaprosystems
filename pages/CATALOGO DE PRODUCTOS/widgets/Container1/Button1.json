@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 6,
   "boxShadow": "none",
   "buttonColor": "#22c55e",
   "buttonVariant": "PRIMARY",
@@ -47,7 +47,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 16,
   "text": "Enviar a stock critico",
-  "topRow": 1,
+  "topRow": 0,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "qzw06fr5vc",
