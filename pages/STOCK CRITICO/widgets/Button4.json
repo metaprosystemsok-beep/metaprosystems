@@ -42,7 +42,7 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 14,
+  "rightColumn": 15,
   "text": "Borrar",
   "topRow": 0,
   "type": "BUTTON_WIDGET",

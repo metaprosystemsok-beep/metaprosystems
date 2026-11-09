@@ -88,12 +88,6 @@
       "key": "primaryColumns.EditActions1.discardBorderRadius"
     },
     {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
-    },
-    {
       "key": "primaryColumns.id.computedValue"
     },
     {
@@ -130,6 +124,9 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
     }
   ],
   "dynamicTriggerPathList": [
@@ -203,19 +200,19 @@
       "isCellVisible": true,
       "isDerived": true,
       "isDisabled": false,
-      "isDiscardDisabled": "{{ventas_y_finanzas.processedTableData.map((currentRow, currentIndex) => ( !ventas_y_finanzas.updatedRowIndices.includes(currentIndex)))}}",
+      "isDiscardDisabled": "",
       "isDiscardVisible": false,
       "isEditable": false,
-      "isSaveDisabled": "{{ventas_y_finanzas.processedTableData.map((currentRow, currentIndex) => ( !ventas_y_finanzas.updatedRowIndices.includes(currentIndex)))}}",
+      "isSaveDisabled": "false",
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Save / Discard",
       "notation": "standard",
-      "onSave": "{{Api_actualizar_precio_stock_ti.run();\nQuery_cambios_manual.run();\nvetas_finanzas_catalo_producto.run()}}",
+      "onSave": "{{JS_acciones_stock.actualizarStock();}}",
       "originalId": "EditActions1",
       "saveActionLabel": "Save",
       "saveBorderRadius": "{{ventas_y_finanzas.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "saveButtonColor": "#86efac",
+      "saveButtonColor": "#22c55e",
       "saveIconAlign": "left",
       "sticky": "",
       "textColor": "#86efac",

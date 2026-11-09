@@ -1,7 +1,10 @@
 UPDATE ventas_y_finanzas
-SET costo = {{ Number(ventas_y_finanzas.updatedRow.costo) }},
+SET nombre_producto = '{{ ventas_y_finanzas.updatedRow.nombre_producto }}',
+    costo = {{ Number(ventas_y_finanzas.updatedRow.costo) }},
     porcentaje = {{ Number(ventas_y_finanzas.updatedRow.porcentaje) }},
     transferencia_efectivo = {{ Number(ventas_y_finanzas.updatedRow.transferencia_efectivo) }},
-    porcentaje_tarjeta = {{ ventas_y_finanzas.updatedRow.porcentaje_tarjeta }},
-    stock = {{ Number(ventas_y_finanzas.updatedRow.stock) }}
+    porcentaje_tarjeta = {{ Number(ventas_y_finanzas.updatedRow.porcentaje_tarjeta) }},
+    tarjeta_credito = {{ Number(ventas_y_finanzas.updatedRow.tarjeta_credito) }},
+    stock = {{ Number(ventas_y_finanzas.updatedRow.stock) }},
+    id_productos = {{ Number(ventas_y_finanzas.updatedRow.id_productos) }}
 WHERE id = {{ Number(ventas_y_finanzas.updatedRow.id) }};

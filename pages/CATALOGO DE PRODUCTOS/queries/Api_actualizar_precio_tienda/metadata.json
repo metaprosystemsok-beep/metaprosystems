@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6a3ae2b905dd9b2f221ae850_03fe69e5-acba-4e9f-acda-001925363a72",
-  "id": "CATALOGO DE PRODUCTOS_Api_actualizar_precio_stock_ti",
+  "gitSyncId": "6a3ae2b905dd9b2f221ae850_e443ebec-5790-449b-bc30-404564d61905",
+  "id": "CATALOGO DE PRODUCTOS_Api_actualizar_precio_tienda",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -21,7 +21,7 @@
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/webhook/actualizar-precio-tienda",
+      "path": "/webhook/actualizar-precios-tienda",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -44,9 +44,9 @@
         "key": "body"
       }
     ],
-    "name": "Api_actualizar_precio_stock_ti",
+    "name": "Api_actualizar_precio_tienda",
     "pageId": "CATALOGO DE PRODUCTOS",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": true
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }
