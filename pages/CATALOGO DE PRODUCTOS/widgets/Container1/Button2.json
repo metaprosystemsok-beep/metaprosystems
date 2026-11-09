@@ -11,7 +11,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
@@ -24,6 +28,7 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "onClick": "{{Api_actualizar_stock_tienda.run()}}",
   "parentColumnSpace": 16.546875,
   "parentId": "jgzk37d2hc",
   "parentRowSpace": 10,
