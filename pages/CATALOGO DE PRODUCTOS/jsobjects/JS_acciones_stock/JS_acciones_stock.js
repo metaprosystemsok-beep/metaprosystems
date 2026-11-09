@@ -1,7 +1,7 @@
 export default {
   actualizarStock: async () => {
     try {
-      console.log("¡Se disparó el JS!", ventas_y_finanzas.updatedRow);
+      console.log("Se disparó el JS!", ventas_y_finanzas.updatedRow);
 
       const filaModificada = ventas_y_finanzas.updatedRow;
 
@@ -17,24 +17,16 @@ export default {
       const transferencia_efectivo = Number((costo * (1 + (porcentaje / 100))).toFixed(2));
       const tarjeta_credito = Number((transferencia_efectivo * (1 + (porcentaje_tarjeta / 100))).toFixed(2));
 
-      // Payload completo con los cálculos matemáticos bien hechos
-      const payload = {
-        id: filaModificada.id,
-        id_productos: filaModificada.id_productos,
-        costo: costo,
-        transferencia_efectivo: transferencia_efectivo,
-        tarjeta_credito: tarjeta_credito,
-        stock: Number(filaModificada.stock) || 0
-      };
-
+      // Guardamos directamente en la base de datos local de Postgres
+      await ventas_finanzas_update.run();
+      
+      // Ejecutamos los cambios manuales internos si los necesitas
       await Query_cambios_manual.run();
-      await Promise.all([
-        Api_actualizar_precio_tienda.run(payload),
-        Api_actualizar_stock_tienda.run(payload)
-      ]);
-      await vetas_finanzas_catalo_producto.run();
 
-      showAlert("¡Actualizado con éxito!", "success");
+      // Refrescamos la tabla para ver los datos actualizados
+      await ventas_finanzas_catalo_product.run();
+
+      showAlert("¡Actualizado en la base de datos con éxito!", "success");
 
     } catch (error) {
       showAlert("Error: " + error.message, "error");

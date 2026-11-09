@@ -1,11 +1,11 @@
 {
   "gitSyncId": "6a3ae2b905dd9b2f221ae850_727f5606-02fa-46e2-bb79-a703a8d9f0d7",
-  "id": "CATALOGO DE PRODUCTOS_ventas_finanzas_catal_prod",
+  "id": "CATALOGO DE PRODUCTOS_ventas_finanzas_insert",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.ventas_y_finanzas (\"nombre_producto\",\"costo\",\"porcentaje\",\"transferencia_efectivo\",\"tarjeta_credito\",\"stock\",\"id_variante\") VALUES ('{{(ventas_y_finanzas.newRow || {}).nombre_producto}}','{{(ventas_y_finanzas.newRow || {}).costo}}','{{(ventas_y_finanzas.newRow || {}).porcentaje}}','{{(ventas_y_finanzas.newRow || {}).transferencia_efectivo}}','{{(ventas_y_finanzas.newRow || {}).tarjeta_credito}}','{{(ventas_y_finanzas.newRow || {}).stock}}','{{(ventas_y_finanzas.newRow || {}).id_variante}}')",
+      "body": "INSERT INTO public.ventas_y_finanzas (\n  \"nombre_producto\",\n  \"costo\",\n  \"porcentaje\",\n  \"transferencia_efectivo\",\n  \"tarjeta_credito\",\n  \"stock\",\n  \"id_variante\"\n) \nVALUES (\n  '{{ ventas_y_finanzas.newRow.nombre_producto }}',\n  {{ Number(ventas_y_finanzas.newRow.costo) || 0 }},\n  {{ Number(ventas_y_finanzas.newRow.porcentaje) || 0 }},\n  {{ Number(ventas_y_finanzas.newRow.transferencia_efectivo) || 0 }},\n  {{ Number(ventas_y_finanzas.newRow.tarjeta_credito) || 0 }},\n  {{ Number(ventas_y_finanzas.newRow.stock) || 0 }},\n  {{ Number(ventas_y_finanzas.newRow.id_variante) || null }}\n);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "ventas_finanzas_catal_prod",
+    "name": "ventas_finanzas_insert",
     "pageId": "CATALOGO DE PRODUCTOS",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

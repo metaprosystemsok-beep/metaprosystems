@@ -1,0 +1,10 @@
+UPDATE public.ventas_y_finanzas
+SET 
+    "nombre_producto" = '{{ventas_y_finanzas.updatedRow.nombre_producto}}',
+    "costo" = {{Number(ventas_y_finanzas.updatedRow.costo) || 0}},
+    "porcentaje" = {{Number(ventas_y_finanzas.updatedRow.porcentaje) || 0}},
+    "transferencia_efectivo" = {{Number(ventas_y_finanzas.updatedRow.transferencia_efectivo) || 0}},
+    "tarjeta_credito" = {{Number(ventas_y_finanzas.updatedRow.tarjeta_credito) || 0}},
+    "stock" = {{Number(ventas_y_finanzas.updatedRow.stock) || 0}},
+    "id_variante" = {{Number(ventas_y_finanzas.updatedRow.id_variante) || 0}}
+WHERE "id" = {{ventas_y_finanzas.updatedRow.id}};

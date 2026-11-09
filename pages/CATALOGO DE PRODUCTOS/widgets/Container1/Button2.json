@@ -33,7 +33,7 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 16,
-  "text": "Guardar/Enviar a Tienda",
+  "text": "Enviar a Tienda",
   "topRow": 0,
   "type": "BUTTON_WIDGET",
   "version": 1,

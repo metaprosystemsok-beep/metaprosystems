@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6a3ae2b905dd9b2f221ae850_23fbfcaa-888e-4053-b8f7-90b1a25c41f9",
-  "id": "CATALOGO DE PRODUCTOS_vetas_finanzas_catalo_producto",
+  "id": "CATALOGO DE PRODUCTOS_ventas_finanzas_catalo_product",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "vetas_finanzas_catalo_producto",
+    "name": "ventas_finanzas_catalo_product",
     "pageId": "CATALOGO DE PRODUCTOS",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

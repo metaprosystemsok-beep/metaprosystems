@@ -21,7 +21,7 @@
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/webhook/actualizar-precios-tienda",
+      "path": "/webhook-test/actualizar-precios-tienda",
       "pluginSpecifiedTemplates": [
         {
           "value": true
