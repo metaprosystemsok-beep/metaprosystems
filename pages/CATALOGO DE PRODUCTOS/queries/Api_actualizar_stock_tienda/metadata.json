@@ -21,7 +21,7 @@
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/webhook-test/actualizar-stock-tienda",
+      "path": "/webhook/actualizar-stock-tienda",
       "pluginSpecifiedTemplates": [
         {
           "value": true
