@@ -28,7 +28,7 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{Api_actualizar_stock_tienda.run()}}",
+  "onClick": "{{JSObject1.enviarATienda();}}",
   "parentColumnSpace": 16.546875,
   "parentId": "jgzk37d2hc",
   "parentRowSpace": 10,

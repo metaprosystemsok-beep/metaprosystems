@@ -47,12 +47,12 @@
   ],
   "columnUpdatedAt": 1787163784461,
   "columnWidthMap": {
-    "costo": 111,
+    "costo": 99,
     "customColumn1": 106,
     "id": 124,
     "nombre_producto": 446,
-    "porcentaje": 116,
-    "porcentaje_tarjeta": 110,
+    "porcentaje": 128,
+    "porcentaje_tarjeta": 129,
     "stock": 95,
     "tarjeta_credito": 138,
     "transferencia_efectivo": 99

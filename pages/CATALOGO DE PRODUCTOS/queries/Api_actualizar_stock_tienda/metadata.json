@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"updatedRow\": {{ ventas_y_finanzas.updatedRow }}\n}",
+      "body": "{\n  \"productos\": \"{{ ventas_y_finanzas.selectedRows }}\"\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
