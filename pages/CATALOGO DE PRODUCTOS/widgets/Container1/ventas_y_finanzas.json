@@ -52,10 +52,10 @@
     "id": 124,
     "nombre_producto": 446,
     "porcentaje": 128,
-    "porcentaje_tarjeta": 129,
+    "porcentaje_tarjeta": 142,
     "stock": 95,
     "tarjeta_credito": 138,
-    "transferencia_efectivo": 99
+    "transferencia_efectivo": 147
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
