@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "DELETE FROM stock_critico \nWHERE id IN ({{ Table_stock_critico.selectedRows.map(r => r.id).join(',') }})",
+      "body": "DELETE FROM stock_critico\nWHERE id::text = ANY(string_to_array('{{ Table_stock_critico.selectedRows.map(r => r.id).join(\",\") }}', ','))",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
