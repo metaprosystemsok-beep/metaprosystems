@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "CREATE INDEX idx_carritos_abandonados_id ON public.carritos_abandonados (id);",
+      "body": "DROP INDEX IF EXISTS idx_carritos_abandonados_id;\n\nCREATE INDEX idx_carritos_abandonados_id_fecha ON public.carritos_abandonados (id, fecha);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

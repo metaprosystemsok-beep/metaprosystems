@@ -56,7 +56,7 @@
   "mobileRightColumn": 12,
   "mobileTopRow": 12,
   "needsErrorInfo": false,
-  "onDateSelected": "{{facturacion_bruta.run()}}",
+  "onDateSelected": "{{facturacion_neta.run()}}",
   "parentColumnSpace": 16.546875,
   "parentId": "t3iiy0fteh",
   "parentRowSpace": 10,

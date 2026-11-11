@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6a3ae2b905dd9b2f221ae850_c6a72751-e9b9-45fc-ad50-95402e1a7c9f",
-  "id": "CARRITOS ABANDONADOS_facturacion_bruta",
+  "id": "CARRITOS ABANDONADOS_facturacion_neta",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "facturacion_bruta",
+    "name": "facturacion_neta",
     "pageId": "CARRITOS ABANDONADOS",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
