@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE public.ventas_y_finanzas\nSET \n    \"nombre_producto\" = '{{ventas_y_finanzas.updatedRow.nombre_producto}}',\n    \"costo\" = {{Number(ventas_y_finanzas.updatedRow.costo) || 0}},\n    \"porcentaje\" = {{Number(ventas_y_finanzas.updatedRow.porcentaje) || 0}},\n    \"transferencia_efectivo\" = {{Number(ventas_y_finanzas.updatedRow.transferencia_efectivo) || 0}},\n    \"tarjeta_credito\" = {{Number(ventas_y_finanzas.updatedRow.tarjeta_credito) || 0}},\n    \"stock\" = {{Number(ventas_y_finanzas.updatedRow.stock) || 0}},\n    \"id_variante\" = {{Number(ventas_y_finanzas.updatedRow.id_variante) || 0}}\nWHERE \"id\" = {{ventas_y_finanzas.updatedRow.id}};",
+      "body": "UPDATE public.ventas_y_finanzas \nSET \n    \"nombre_producto\" = '{{ (ventas_y_finanzas.updatedRow || {}).nombre_producto || \"\" }}',\n    \"costo\" = {{ Number((ventas_y_finanzas.updatedRow || {}).costo) || 0 }},\n    \"porcentaje\" = {{ Number((ventas_y_finanzas.updatedRow || {}).porcentaje) || 0 }},\n    \"transferencia_efectivo\" = {{ Number((ventas_y_finanzas.updatedRow || {}).transferencia_efectivo) || 0 }},\n    \"tarjeta_credito\" = {{ Number((ventas_y_finanzas.updatedRow || {}).tarjeta_credito) || 0 }},\n    \"stock\" = {{ Number((ventas_y_finanzas.updatedRow || {}).stock) || 0 }},\n    \"id_variante\" = {{ Number((ventas_y_finanzas.updatedRow || {}).id_variante) || null }}\nWHERE \"id\" = {{ Number((ventas_y_finanzas.updatedRow || {}).id) || 0 }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

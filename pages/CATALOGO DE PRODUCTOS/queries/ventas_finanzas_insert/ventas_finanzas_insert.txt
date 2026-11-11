@@ -1,18 +1,18 @@
 INSERT INTO public.ventas_y_finanzas (
-  "nombre_producto",
-  "costo",
-  "porcentaje",
-  "transferencia_efectivo",
-  "tarjeta_credito",
-  "stock",
-  "id_variante"
-) 
-VALUES (
-  '{{ ventas_y_finanzas.newRow.nombre_producto }}',
-  {{ Number(ventas_y_finanzas.newRow.costo) || 0 }},
-  {{ Number(ventas_y_finanzas.newRow.porcentaje) || 0 }},
-  {{ Number(ventas_y_finanzas.newRow.transferencia_efectivo) || 0 }},
-  {{ Number(ventas_y_finanzas.newRow.tarjeta_credito) || 0 }},
-  {{ Number(ventas_y_finanzas.newRow.stock) || 0 }},
-  {{ Number(ventas_y_finanzas.newRow.id_variante) || null }}
-);
+    "nombre_producto",
+    "costo",
+    "porcentaje",
+    "transferencia_efectivo",
+    "tarjeta_credito",
+    "stock",
+    "id_variante"
+)
+SELECT 
+    {{ (ventas_y_finanzas.newRow || {}).nombre_producto }},
+    {{ Number((ventas_y_finanzas.newRow || {}).costo) || 0 }},
+    {{ Number((ventas_y_finanzas.newRow || {}).porcentaje) || 0 }},
+    {{ Number((ventas_y_finanzas.newRow || {}).transferencia_efectivo) || 0 }},
+    {{ Number((ventas_y_finanzas.newRow || {}).tarjeta_credito) || 0 }},
+    {{ Number((ventas_y_finanzas.newRow || {}).stock) || 0 }},
+    {{ Number((ventas_y_finanzas.newRow || {}).id_variante) || null }}
+WHERE {{ !!(ventas_y_finanzas.newRow || {}).nombre_producto }};

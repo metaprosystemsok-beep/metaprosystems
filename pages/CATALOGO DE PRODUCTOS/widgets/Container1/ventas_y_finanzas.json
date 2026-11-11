@@ -34,7 +34,6 @@
     }
   },
   "columnOrder": [
-    "id",
     "nombre_producto",
     "costo",
     "porcentaje",
@@ -42,10 +41,11 @@
     "porcentaje_tarjeta",
     "tarjeta_credito",
     "stock",
+    "id",
     "id_productos",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1787163784461,
+  "columnUpdatedAt": 1794412768090,
   "columnWidthMap": {
     "costo": 99,
     "customColumn1": 106,

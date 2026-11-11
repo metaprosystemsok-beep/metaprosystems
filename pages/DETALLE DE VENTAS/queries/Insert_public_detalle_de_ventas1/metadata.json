@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.detalle_de_ventas (\"nombre_cliente\",\"producto_venta\",\"total_venta\",\"costo_envio\",\"tipo_envio\",\"mail\",\"telefono\",\"fecha\",\"id_variante\") VALUES ('{{(tabla_venta.newRow || {}).nombre_cliente}}','{{(tabla_venta.newRow || {}).producto_venta}}','{{(tabla_venta.newRow || {}).total_venta}}','{{(tabla_venta.newRow || {}).costo_envio}}','{{(tabla_venta.newRow || {}).tipo_envio}}','{{(tabla_venta.newRow || {}).mail}}','{{(tabla_venta.newRow || {}).telefono}}','{{(tabla_venta.newRow || {}).fecha}}','{{(tabla_venta.newRow || {}).id_variante}}')",
+      "body": "INSERT INTO public.detalle_de_ventas (nombre_cliente, producto_venta, total_venta, costo_envio, tipo_envio, mail, telefono, fecha, id_variante)\nSELECT \n    {{ (tabla_venta.newRow || {}).nombre_cliente }},\n    {{ (tabla_venta.newRow || {}).producto_venta }},\n    {{ (tabla_venta.newRow || {}).total_venta || null }},\n    {{ (tabla_venta.newRow || {}).costo_envio || null }},\n    {{ (tabla_venta.newRow || {}).tipo_envio }},\n    {{ (tabla_venta.newRow || {}).mail }},\n    {{ (tabla_venta.newRow || {}).telefono }},\n    {{ (tabla_venta.newRow || {}).fecha || null }},\n    {{ (tabla_venta.newRow || {}).id_variante || null }}\nWHERE {{ !!(tabla_venta.newRow || {}).nombre_cliente }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
