@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "DELETE FROM public.clientes_inactivos\nWHERE email = ANY(string_to_array('{{ Table1.selectedRows.map(r => r.email).join(\",\") }}', ','));",
+      "body": "DELETE FROM public.base_clientes\nWHERE id IN ({{ TABLA_CLIENTES.selectedRows.map(row => row.id).join(',') }});",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000

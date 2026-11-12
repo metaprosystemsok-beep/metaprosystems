@@ -1,1 +1,0 @@
-SELECT * FROM base_clientes LIMIT 10;

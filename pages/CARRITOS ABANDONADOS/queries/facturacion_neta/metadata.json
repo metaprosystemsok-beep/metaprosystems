@@ -30,6 +30,6 @@
     "name": "facturacion_neta",
     "pageId": "CARRITOS ABANDONADOS",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

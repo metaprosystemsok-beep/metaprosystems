@@ -11,7 +11,7 @@
       "navStyle": "stacked",
       "orientation": "top",
       "position": "static",
-      "showNavbar": false,
+      "showNavbar": true,
       "showSignIn": false
     },
     "themeSetting": {
@@ -86,7 +86,7 @@
       "navStyle": "stacked",
       "orientation": "top",
       "position": "static",
-      "showNavbar": false,
+      "showNavbar": true,
       "showSignIn": false
     },
     "themeSetting": {

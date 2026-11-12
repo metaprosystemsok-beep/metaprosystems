@@ -16,33 +16,37 @@
       "key": "onClick"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "ef4uolvrtn",
-  "leftColumn": 0,
+  "key": "tmeqw6ws63",
+  "leftColumn": 46,
   "minWidth": 120,
   "mobileBottomRow": 4,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 17,
+  "mobileLeftColumn": 48,
+  "mobileRightColumn": 64,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "",
-  "parentColumnSpace": 16.859375,
-  "parentId": "0",
+  "onClick": "Query_borrar1.run(() => {\n    tabla_clientes_inactivos.run();\n    showAlert(\"Cliente inactivo eliminado correctamente\", \"success\");\n});",
+  "parentColumnSpace": 16.546875,
+  "parentId": "v3ntwmff7v",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 19,
-  "text": "Borrar",
+  "rightColumn": 64,
+  "text": "Borra Clientes Inactivos",
   "topRow": 0,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "ruiorp7odw",
-  "widgetName": "Button2"
+  "widgetId": "ytkdimsniq",
+  "widgetName": "Button3"
 }

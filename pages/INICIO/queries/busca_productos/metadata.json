@@ -30,6 +30,6 @@
     "name": "busca_productos",
     "pageId": "INICIO",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

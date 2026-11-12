@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a3ae2b905dd9b2f221ae850_65ed587f-c38d-410a-bea3-f87a6e8cbf9c",
+  "gitSyncId": "6a3ae2b905dd9b2f221ae850_65b67fa9-481d-47f9-bf63-352e74e59b50",
   "id": "BASE CLIENTES_Total_record_public_clientes_inactivos1",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*) from public.clientes_inactivos where email ilike '%{{Table1.searchText}}%';",
+      "body": "SELECT COUNT(*) from public.clientes_inactivos;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -29,7 +29,7 @@
     ],
     "name": "Total_record_public_clientes_inactivos1",
     "pageId": "BASE CLIENTES",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

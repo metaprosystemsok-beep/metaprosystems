@@ -30,6 +30,6 @@
     "name": "busca_bono",
     "pageId": "INICIO",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

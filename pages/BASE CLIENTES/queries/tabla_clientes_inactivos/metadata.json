@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a3ae2b905dd9b2f221ae850_dffe2545-ee09-485c-9229-1c69c5fba683",
-  "id": "BASE CLIENTES_Query_clientes_inactivos",
+  "gitSyncId": "6a3ae2b905dd9b2f221ae850_959ed507-76db-4312-a13f-99a068ca9bae",
+  "id": "BASE CLIENTES_tabla_clientes_inactivos",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    nombre_cliente,\n    email,\n    telefono,\n    MAX(ultima_compra) AS ultima_compra,\n    EXTRACT(DAY FROM NOW() - MAX(ultima_compra))::INT AS dias_inactivo\nFROM public.base_clientes\nGROUP BY nombre_cliente, email, telefono\nHAVING MAX(ultima_compra) < NOW() - INTERVAL '30 days'\nORDER BY ultima_compra ASC;",
+      "body": "SELECT\n  ROW_NUMBER() OVER () AS id,\n  nombre_cliente,\n  email,\n  telefono,\n  MAX(ultima_compra) AS ultima_compra,\n  EXTRACT(DAY FROM NOW() - MAX(ultima_compra))::INT AS dias_inactivo\nFROM public.base_clientes\nGROUP BY nombre_cliente, email, telefono\nHAVING MAX(ultima_compra) < NOW() - INTERVAL '30 days'\nORDER BY ultima_compra ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Query_clientes_inactivos",
+    "name": "tabla_clientes_inactivos",
     "pageId": "BASE CLIENTES",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

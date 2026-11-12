@@ -1,0 +1,1 @@
+CREATE INDEX IF NOT EXISTS clientes_inactivos_id ON public.clientes_inactivos (id);

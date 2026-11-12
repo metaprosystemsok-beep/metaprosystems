@@ -30,6 +30,6 @@
     "name": "Query_porcentaje",
     "pageId": "CARRITOS ABANDONADOS",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

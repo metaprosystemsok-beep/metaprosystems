@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a3ae2b905dd9b2f221ae850_0906c95d-2930-4157-b737-dce3dedee519",
-  "id": "BASE CLIENTES_Query1",
+  "gitSyncId": "6a3ae2b905dd9b2f221ae850_dffac51d-fbba-49b7-bf1f-00e6aed839f5",
+  "id": "BASE CLIENTES_Query_borrar1",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM base_clientes LIMIT 10;",
+      "body": "DELETE FROM public.clientes_inactivos \nWHERE id::text = ANY(string_to_array('{{ Table1.selectedRows.map(r => r.id).join(\",\") }}', ','));",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,8 +22,12 @@
       "name": "metaprosystems",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "Query1",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "Query_borrar1",
     "pageId": "BASE CLIENTES",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

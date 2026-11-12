@@ -1,2 +1,2 @@
-DELETE FROM public.clientes_inactivos
-WHERE email = ANY(string_to_array('{{ Table1.selectedRows.map(r => r.email).join(",") }}', ','));
+DELETE FROM public.base_clientes
+WHERE id IN ({{ TABLA_CLIENTES.selectedRows.map(row => row.id).join(',') }});

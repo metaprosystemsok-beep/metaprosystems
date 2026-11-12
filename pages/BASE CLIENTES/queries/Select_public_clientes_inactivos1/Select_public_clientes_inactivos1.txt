@@ -2,8 +2,6 @@ SELECT
   *
 FROM
   public.clientes_inactivos
-WHERE
-  "email" ilike '%{{Table1.searchText}}%'
 ORDER BY
   "{{Table1.sortOrder.column || 'id'}}" {{Table1.sortOrder.order !== "desc" ? "" : "DESC"}}
 LIMIT
