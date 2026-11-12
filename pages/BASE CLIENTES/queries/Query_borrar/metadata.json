@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "DELETE FROM public.base_clientes\nWHERE email = ANY(string_to_array('{{ Table1.selectedRows.map(r => r.email).join(\",\") }}', ','));",
+      "body": "DELETE FROM public.clientes_inactivos\nWHERE email = ANY(string_to_array('{{ Table1.selectedRows.map(r => r.email).join(\",\") }}', ','));",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
