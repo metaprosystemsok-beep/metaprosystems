@@ -1,0 +1,1 @@
+UPDATE public.clientes_inactivos SET "nombre_cliente"= '{{Table1.updatedRow.nombre_cliente}}', "email"= '{{Table1.updatedRow.email}}', "telefono"= '{{Table1.updatedRow.telefono}}', "ultima_compra"= '{{Table1.updatedRow.ultima_compra}}', "dias_inactivo"= '{{Table1.updatedRow.dias_inactivo}}' WHERE "id"= {{Table1.updatedRow.id}};

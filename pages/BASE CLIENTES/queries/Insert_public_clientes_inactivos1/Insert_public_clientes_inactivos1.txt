@@ -1,0 +1,1 @@
+INSERT INTO public.clientes_inactivos ("nombre_cliente","email","telefono","ultima_compra","dias_inactivo") VALUES ('{{(Table1.newRow || {}).nombre_cliente}}','{{(Table1.newRow || {}).email}}','{{(Table1.newRow || {}).telefono}}','{{(Table1.newRow || {}).ultima_compra}}','{{(Table1.newRow || {}).dias_inactivo}}')

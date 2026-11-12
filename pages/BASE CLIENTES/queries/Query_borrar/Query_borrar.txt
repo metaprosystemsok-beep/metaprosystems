@@ -1,0 +1,2 @@
+DELETE FROM public.base_clientes
+WHERE email = ANY(string_to_array('{{ Table1.selectedRows.map(r => r.email).join(",") }}', ','));

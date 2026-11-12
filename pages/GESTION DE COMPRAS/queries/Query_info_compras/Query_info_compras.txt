@@ -1,0 +1,5 @@
+SELECT COALESCE(SUM(total_general_orden), 0) AS total_compras 
+FROM public.gestion_compras 
+WHERE fecha::date >= COALESCE('{{ moment(DatePicker1.selectedDate).format("YYYY-MM-DD") }}', '2026-10-01')::date 
+  AND fecha::date <= COALESCE('{{ moment(DatePicker2.selectedDate).format("YYYY-MM-DD") }}', '2026-10-31')::date
+  AND ('{{ Select1.selectedOptionValue }}' = '' OR nombre_empresa = '{{ Select1.selectedOptionValue }}')

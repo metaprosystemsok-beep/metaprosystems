@@ -1,0 +1,10 @@
+SELECT 
+    nombre_cliente,
+    email,
+    telefono,
+    MAX(ultima_compra) AS ultima_compra,
+    EXTRACT(DAY FROM NOW() - MAX(ultima_compra))::INT AS dias_inactivo
+FROM public.base_clientes
+GROUP BY nombre_cliente, email, telefono
+HAVING MAX(ultima_compra) < NOW() - INTERVAL '30 days'
+ORDER BY ultima_compra ASC;
