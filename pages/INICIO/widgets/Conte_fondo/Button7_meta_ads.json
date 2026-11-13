@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 65,
+  "bottomRow": 62,
   "boxShadow": "none",
   "buttonColor": "#1e1e1f",
   "buttonVariant": "PRIMARY",
@@ -45,7 +45,7 @@
   "rightColumn": 28,
   "text": "MÉTRICAS META ADS / REDES SOCIALES",
   "tooltip": "",
-  "topRow": 55,
+  "topRow": 52,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "nfu9jukqpv",

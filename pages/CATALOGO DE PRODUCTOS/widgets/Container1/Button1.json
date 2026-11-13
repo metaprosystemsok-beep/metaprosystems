@@ -36,7 +36,7 @@
   "mobileRightColumn": 15,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{\n  Query_enviar_stock_critico.run().then(() => {\n    showAlert('Productos enviados al stock crítico', 'success');\n  }).catch(() => {\n    showAlert('Error: Algunos productos ya existen en el stock', 'error');\n  })\n}}",
+  "onClick": "(() => {\n    if (!ventas_y_finanzas.selectedRows || ventas_y_finanzas.selectedRows.length === 0) {\n        showAlert(\"Por favor, seleccioná al menos un elemento.\", \"warning\");\n        return;\n    }\n\n    Query_enviar_stock_critico.run().then(() => {\n        showAlert('Productos enviados al stock crítico', 'success');\n    }).catch(() => {\n        showAlert('Error: Algunos productos ya existen en el stock', 'error');\n    });\n})();",
   "parentColumnSpace": 20.25,
   "parentId": "jgzk37d2hc",
   "parentRowSpace": 10,

@@ -1,2 +1,2 @@
 DELETE FROM public.base_clientes
-WHERE id IN ({{ TABLA_CLIENTES.selectedRows.map(row => row.id).join(',') }});
+WHERE id = ANY(string_to_array('{{ TABLA_CLIENTES.selectedRows?.map(r => r.id).join(",") || "" }}', ',')::int[]);

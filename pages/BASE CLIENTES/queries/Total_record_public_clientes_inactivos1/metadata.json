@@ -29,7 +29,7 @@
     ],
     "name": "Total_record_public_clientes_inactivos1",
     "pageId": "BASE CLIENTES",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

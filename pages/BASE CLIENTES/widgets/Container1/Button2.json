@@ -33,7 +33,7 @@
   "mobileRightColumn": 17,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "Query_borrar.run(() => {\n    base_clientes.run();\n    showAlert(\"Clientes eliminados correctamente\", \"success\");\n});",
+  "onClick": "(() => {\n    if (!TABLA_CLIENTES.selectedRows || TABLA_CLIENTES.selectedRows.length === 0) {\n        showAlert(\"Por favor, seleccioná al menos un cliente para borrar.\", \"warning\");\n        return;\n    }\n\n    Query_borrar.run(() => {\n        JSObject1.obtenerDatosConColor().then(() => {\n            showAlert(\"Cliente eliminado correctamente\", \"success\");\n        });\n    });\n})();",
   "parentColumnSpace": 16.859375,
   "parentId": "v3ntwmff7v",
   "parentRowSpace": 10,

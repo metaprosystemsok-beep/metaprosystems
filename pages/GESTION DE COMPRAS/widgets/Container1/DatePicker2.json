@@ -2,9 +2,12 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 8,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "closeOnSelection": true,
+  "dateFormat": "YYYY-MM-DD",
+  "datePickerType": "DATE_PICKER",
+  "defaultDate": "{{moment().toDate()}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -13,59 +16,58 @@
       "key": "borderRadius"
     },
     {
-      "key": "sourceData"
+      "key": "defaultDate"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
-      "key": "sourceData"
+      "key": "dateFormat"
     },
     {
-      "key": "optionLabel"
+      "key": "defaultDate"
     }
   ],
   "dynamicTriggerPathList": [
     {
-      "key": "onOptionChange"
+      "key": "onDateSelected"
     }
   ],
+  "firstDayOfWeek": 0,
   "isDisabled": false,
-  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "ez3x6wp368",
+  "key": "xndgms13ka",
+  "label": "Label",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "proveedor",
   "labelTextColor": "#22c55e",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 0,
+  "leftColumn": 53,
+  "maxDate": "2121-12-31T18:29:00.000Z",
   "maxDynamicHeight": 9000,
+  "minDate": "1920-12-31T18:30:00.000Z",
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 7,
+  "mobileBottomRow": 11,
   "mobileLeftColumn": 0,
-  "mobileRightColumn": 19,
-  "mobileTopRow": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "onOptionChange": "{{Query_info_compras.run()}}",
-  "optionLabel": "nombre_empresa",
-  "optionValue": "nombre_empresa",
+  "onDateSelected": "{{Query_info_compras.run();}}",
   "parentColumnSpace": 16.859375,
-  "parentId": "0",
+  "parentId": "qk9e5s0afr",
   "parentRowSpace": 10,
-  "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 25,
-  "serverSideFiltering": false,
-  "sourceData": "{{ [...new Set(Select_public_gestion_compras1.data.map(item => item.nombre_empresa))].map(empresa => ({ nombre_empresa: empresa })) }}",
+  "rightColumn": 64,
+  "shortcuts": false,
+  "timePrecision": "minute",
   "topRow": 0,
-  "type": "SELECT_WIDGET",
-  "version": 1,
-  "widgetId": "ply3gdyyz7",
-  "widgetName": "Select1"
+  "type": "DATE_PICKER_WIDGET2",
+  "version": 2,
+  "widgetId": "8kni6q7sni",
+  "widgetName": "DatePicker2"
 }

@@ -1,0 +1,6 @@
+{
+  "tipo": "whatsapp",
+  "telefono": "{{ Table1.selectedRow.telefono }}",
+  "nombre_cliente": "{{ Table1.selectedRow.nombre_cliente }}",
+  "email": "{{ Table1.selectedRow.email }}"
+}

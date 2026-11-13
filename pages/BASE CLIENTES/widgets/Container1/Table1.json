@@ -1,5 +1,6 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowAddNewRow": true,
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -8,6 +9,7 @@
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
+  "cellBackground": "#18181b",
   "childStylesheet": {
     "button": {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -50,9 +52,7 @@
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
-  "defaultSelectedRowIndices": [
-    0
-  ],
+  "defaultSelectedRowIndices": "",
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
@@ -84,6 +84,9 @@
     },
     {
       "key": "primaryColumns.id.computedValue"
+    },
+    {
+      "key": "totalRecordsCount"
     }
   ],
   "dynamicPropertyPathList": [
@@ -91,7 +94,17 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onPageChange"
+    },
+    {
+      "key": "onSort"
+    },
+    {
+      "key": "onAddNewRowSave"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -100,7 +113,7 @@
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
-  "isVisibleDownload": true,
+  "isVisibleDownload": false,
   "isVisibleFilters": false,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
@@ -114,15 +127,19 @@
   "mobileTopRow": 8,
   "multiRowSelection": true,
   "needsErrorInfo": false,
+  "onAddNewRowSave": "{{Insert_public_clientes_inactivos1.run()}}",
+  "onPageChange": "{{Total_record_public_clientes_inactivos1.run();\ntabla_clientes_inactivos.run()}}",
+  "onSort": "{{Total_record_public_clientes_inactivos1.run();\ntabla_clientes_inactivos.run()}}",
   "parentColumnSpace": 16.546875,
   "parentId": "v3ntwmff7v",
   "parentRowSpace": 10,
-  "primaryColumnId": "id",
+  "primaryColumnId": "email",
   "primaryColumns": {
     "dias_inactivo": {
       "alias": "dias_inactivo",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "#18181b",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"dias_inactivo\"])) : dias_inactivo })()}}",
       "currencyCode": "USD",
@@ -155,6 +172,7 @@
       "alias": "email",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "#18181b",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"email\"])) : email })()}}",
       "currencyCode": "USD",
@@ -187,6 +205,7 @@
       "alias": "id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "#18181b",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
       "currencyCode": "USD",
@@ -219,6 +238,7 @@
       "alias": "nombre_cliente",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "#18181b",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"nombre_cliente\"])) : nombre_cliente })()}}",
       "currencyCode": "USD",
@@ -251,6 +271,7 @@
       "alias": "telefono",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "#18181b",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"telefono\"])) : telefono })()}}",
       "currencyCode": "USD",
@@ -283,6 +304,7 @@
       "alias": "ultima_compra",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "#18181b",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ultima_compra\"])) : ultima_compra })()}}",
       "currencyCode": "USD",
@@ -316,11 +338,12 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
+  "serverSidePaginationEnabled": true,
   "tableData": "{{tabla_clientes_inactivos.data}}",
   "textColor": "#ef4444",
   "textSize": "0.875rem",
   "topRow": 9,
-  "totalRecordsCount": 0,
+  "totalRecordsCount": "{{Total_record_public_clientes_inactivos1.data[0].count}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",

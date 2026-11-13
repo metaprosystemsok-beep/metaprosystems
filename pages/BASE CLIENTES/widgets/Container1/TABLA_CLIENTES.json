@@ -44,15 +44,13 @@
     "colorFila",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1794497588035,
+  "columnUpdatedAt": 1794586990722,
   "columnWidthMap": {},
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
-  "defaultSelectedRowIndices": [
-    0
-  ],
+  "defaultSelectedRowIndices": "[\n  \n]",
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
