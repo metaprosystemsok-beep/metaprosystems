@@ -4,7 +4,9 @@ SELECT
     email,
     MAX(telefono) AS telefono,
     MAX(ultima_compra) AS ultima_compra,
-    EXTRACT(DAY FROM NOW() - MAX(ultima_compra))::INT AS dias_inactivo
+    EXTRACT(DAY FROM NOW() - MAX(ultima_compra))::INT AS dias_inactivo,
+    '' AS mensaje_enviado_mail,
+    '' AS mensaje_enviado_whatsapp
 FROM public.base_clientes
 WHERE email NOT IN (
     SELECT email FROM public.clientes_inactivos WHERE email IS NOT NULL

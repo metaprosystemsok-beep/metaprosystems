@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"tipo\": \"whatsapp\",\n  \"telefono\": \"{{ Table1.selectedRow.telefono }}\",\n  \"nombre_cliente\": \"{{ Table1.selectedRow.nombre_cliente }}\",\n  \"email\": \"{{ Table1.selectedRow.email }}\"\n}",
+      "body": "",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -21,7 +21,7 @@
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/webhook/9c3f25e5-cabc-4457-9562-e1fbb2f37d3c",
+      "path": "/webhook-test/daf15e7d-daba-447a-b9d3-9ed5f3a81016",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -39,11 +39,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "name": "Api1",
     "pageId": "BASE CLIENTES",
     "runBehaviour": "MANUAL",

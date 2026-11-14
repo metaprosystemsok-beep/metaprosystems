@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    ROW_NUMBER() OVER () AS id,\n    MAX(nombre_cliente) AS nombre_cliente,\n    email,\n    MAX(telefono) AS telefono,\n    MAX(ultima_compra) AS ultima_compra,\n    EXTRACT(DAY FROM NOW() - MAX(ultima_compra))::INT AS dias_inactivo\nFROM public.base_clientes\nWHERE email NOT IN (\n    SELECT email FROM public.clientes_inactivos WHERE email IS NOT NULL\n)\nGROUP BY email\nHAVING MAX(ultima_compra) < NOW() - INTERVAL '45 days'\nORDER BY ultima_compra ASC;",
+      "body": "SELECT \n    ROW_NUMBER() OVER () AS id,\n    MAX(nombre_cliente) AS nombre_cliente,\n    email,\n    MAX(telefono) AS telefono,\n    MAX(ultima_compra) AS ultima_compra,\n    EXTRACT(DAY FROM NOW() - MAX(ultima_compra))::INT AS dias_inactivo,\n    '' AS mensaje_enviado_mail,\n    '' AS mensaje_enviado_whatsapp\nFROM public.base_clientes\nWHERE email NOT IN (\n    SELECT email FROM public.clientes_inactivos WHERE email IS NOT NULL\n)\nGROUP BY email\nHAVING MAX(ultima_compra) < NOW() - INTERVAL '45 days'\nORDER BY ultima_compra ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "tabla_clientes_inactivos",
     "pageId": "BASE CLIENTES",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }

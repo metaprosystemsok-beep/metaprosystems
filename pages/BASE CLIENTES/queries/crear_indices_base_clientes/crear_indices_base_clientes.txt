@@ -1,0 +1,2 @@
+CREATE INDEX IF NOT EXISTS idx_base_clientes_email ON public.base_clientes (email);
+CREATE INDEX IF NOT EXISTS idx_base_clientes_ultima_compra ON public.base_clientes (ultima_compra);
