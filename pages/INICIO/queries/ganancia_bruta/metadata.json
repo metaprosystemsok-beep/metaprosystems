@@ -29,7 +29,7 @@
     ],
     "name": "ganancia_bruta",
     "pageId": "INICIO",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": true
   }
 }

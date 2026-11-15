@@ -29,7 +29,7 @@
     ],
     "name": "facturacion_neta",
     "pageId": "INICIO",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": true
   }
 }

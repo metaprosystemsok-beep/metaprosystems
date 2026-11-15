@@ -29,7 +29,7 @@
     ],
     "name": "costo_operativo",
     "pageId": "INICIO",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": true
   }
 }
