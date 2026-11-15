@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "Query_datos_proveedores",
     "pageId": "DATOS PROVEERORES",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": true
   }
 }

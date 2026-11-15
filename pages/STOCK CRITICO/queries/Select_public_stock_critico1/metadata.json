@@ -29,7 +29,7 @@
     ],
     "name": "Select_public_stock_critico1",
     "pageId": "STOCK CRITICO",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": true
   }
 }

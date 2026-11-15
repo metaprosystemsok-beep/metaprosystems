@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "tabla_clientes_inactivos",
     "pageId": "BASE CLIENTES",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": true
   }
 }

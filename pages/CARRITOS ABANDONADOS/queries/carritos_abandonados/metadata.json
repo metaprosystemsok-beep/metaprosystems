@@ -29,7 +29,7 @@
     ],
     "name": "carritos_abandonados",
     "pageId": "CARRITOS ABANDONADOS",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": true
   }
 }

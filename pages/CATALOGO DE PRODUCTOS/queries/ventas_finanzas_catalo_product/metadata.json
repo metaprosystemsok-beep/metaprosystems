@@ -29,7 +29,7 @@
     ],
     "name": "ventas_finanzas_catalo_product",
     "pageId": "CATALOGO DE PRODUCTOS",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": true
   }
 }
