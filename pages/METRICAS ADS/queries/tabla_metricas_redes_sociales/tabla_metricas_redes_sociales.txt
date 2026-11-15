@@ -1,6 +1,11 @@
-SELECT * 
+SELECT *
 FROM "marketing_analytics_v2"
-WHERE LOWER(plataforma) = LOWER('{{ SELEC_PLATAFORMA.selectedOptionLabel }}')
+WHERE 
+  -- Si el selector está vacío, no trae nada (evita que explote); si tiene algo, filtra bien
+  '{{ SELEC_PLATAFORMA.selectedOptionLabel }}' <> ''
+  AND LOWER(plataforma) = LOWER('{{ SELEC_PLATAFORMA.selectedOptionLabel }}')
   AND LEFT("fecha"::text, 10)::date >= '{{ FECHA1.formattedDate }}'::date
   AND LEFT("fecha"::text, 10)::date <= '{{ FECHA2.formattedDate }}'::date
-ORDER BY fecha DESC;
+ORDER BY fecha DESC
+LIMIT {{ TABLA_REPORTE.pageSize }}
+OFFSET {{ TABLA_REPORTE.pageOffset }};

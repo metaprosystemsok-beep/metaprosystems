@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    id,\n    nombre_producto,\n    costo,\n    porcentaje,\n    -- Calcula transferencia sumando el porcentaje de ganancia al costo\n    ROUND((costo * (1 + (porcentaje / 100.0))), 2) AS transferencia_efectivo,\n    porcentaje_tarjeta,\n    -- Calcula tarjeta tomando como base la transferencia y sumándole el porcentaje de tarjeta\n    ROUND((costo * (1 + (porcentaje / 100.0))) * (1 + (porcentaje_tarjeta / 100.0)), 2) AS tarjeta_credito,\n    stock,\n    id_productos\nFROM public.ventas_y_finanzas\nORDER BY nombre_producto ASC;",
+      "body": "SELECT \n    id,\n    nombre_producto,\n    costo,\n    porcentaje,\n    -- Calcula transferencia sumando el porcentaje de ganancia al costo\n    ROUND((costo * (1 + (porcentaje / 100.0))), 2) AS transferencia_efectivo,\n    porcentaje_tarjeta,\n    -- Calcula tarjeta tomando como base la transferencia y sumándole el porcentaje de tarjeta\n    ROUND((costo * (1 + (porcentaje / 100.0))) * (1 + (porcentaje_tarjeta / 100.0)), 2) AS tarjeta_credito,\n    stock,\n    id_productos\nFROM public.ventas_y_finanzas\nORDER BY nombre_producto ASC\nLIMIT {{ventas_y_finanzas.pageSize}}\nOFFSET {{ventas_y_finanzas.pageOffset}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,10 +22,14 @@
       "name": "metaprosystems",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "name": "ventas_finanzas_catalo_product",
     "pageId": "CATALOGO DE PRODUCTOS",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }

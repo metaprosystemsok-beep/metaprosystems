@@ -116,6 +116,9 @@
     },
     {
       "key": "primaryColumns.mensaje_enviado.computedValue"
+    },
+    {
+      "key": "totalRecordsCount"
     }
   ],
   "dynamicPropertyPathList": [
@@ -123,7 +126,11 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onPageChange"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -145,6 +152,7 @@
   "mobileRightColumn": 25,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "onPageChange": "{{carritos_abandonados.run();\nQuery_cantidad_carritos.run()}}",
   "originalBottomRow": 89,
   "originalTopRow": 17,
   "parentColumnSpace": 16.859375,
@@ -565,12 +573,13 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
+  "serverSidePaginationEnabled": true,
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{carritos_abandonados.data}}",
   "textColor": "#86efac",
   "textSize": "0.875rem",
   "topRow": 17,
-  "totalRecordsCount": 0,
+  "totalRecordsCount": "{{Query_cantidad_carritos.data[0].count}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",

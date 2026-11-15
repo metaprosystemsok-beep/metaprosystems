@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * \nFROM \"marketing_analytics_v2\"\nWHERE LOWER(plataforma) = LOWER('{{ SELEC_PLATAFORMA.selectedOptionLabel }}')\n  AND LEFT(\"fecha\"::text, 10)::date >= '{{ FECHA1.formattedDate }}'::date\n  AND LEFT(\"fecha\"::text, 10)::date <= '{{ FECHA2.formattedDate }}'::date\nORDER BY fecha DESC;",
+      "body": "SELECT *\nFROM \"marketing_analytics_v2\"\nWHERE \n  -- Si el selector está vacío, no trae nada (evita que explote); si tiene algo, filtra bien\n  '{{ SELEC_PLATAFORMA.selectedOptionLabel }}' <> ''\n  AND LOWER(plataforma) = LOWER('{{ SELEC_PLATAFORMA.selectedOptionLabel }}')\n  AND LEFT(\"fecha\"::text, 10)::date >= '{{ FECHA1.formattedDate }}'::date\n  AND LEFT(\"fecha\"::text, 10)::date <= '{{ FECHA2.formattedDate }}'::date\nORDER BY fecha DESC\nLIMIT {{ TABLA_REPORTE.pageSize }}\nOFFSET {{ TABLA_REPORTE.pageOffset }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -30,6 +30,6 @@
     "name": "tabla_metricas_redes_sociales",
     "pageId": "METRICAS ADS",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

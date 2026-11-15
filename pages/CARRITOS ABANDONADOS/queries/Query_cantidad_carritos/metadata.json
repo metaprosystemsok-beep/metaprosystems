@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a3ae2b905dd9b2f221ae850_ca6bb402-b740-41ac-9a20-33bbe45df300",
-  "id": "CARRITOS ABANDONADOS_Query1",
+  "gitSyncId": "6a3ae2b905dd9b2f221ae850_e6ab6f1f-29ad-4047-bc83-b7b138e4020c",
+  "id": "CARRITOS ABANDONADOS_Query_cantidad_carritos",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT SUM(total) as total\nFROM carritos_abandonados\nWHERE CAST(fecha AS DATE) BETWEEN CAST('{{ DatePicker1.selectedDate }}' AS DATE) AND CAST('{{ DatePicker2.selectedDate }}' AS DATE)",
+      "body": "SELECT COUNT(*) as cantidad\nFROM carritos_abandonados\nWHERE CAST(fecha AS DATE) BETWEEN CAST('{{ DatePicker1.selectedDate }}' AS DATE) AND CAST('{{ DatePicker2.selectedDate }}' AS DATE)",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "Query1",
+    "name": "Query_cantidad_carritos",
     "pageId": "CARRITOS ABANDONADOS",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": true

@@ -11,4 +11,6 @@ SELECT
     stock,
     id_productos
 FROM public.ventas_y_finanzas
-ORDER BY nombre_producto ASC;
+ORDER BY nombre_producto ASC
+LIMIT {{ventas_y_finanzas.pageSize}}
+OFFSET {{ventas_y_finanzas.pageOffset}};

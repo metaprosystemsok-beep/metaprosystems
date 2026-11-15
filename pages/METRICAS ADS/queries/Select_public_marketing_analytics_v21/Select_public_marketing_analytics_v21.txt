@@ -1,12 +1,17 @@
-SELECT
-  *
-FROM
-  public.marketing_analytics_v2
-WHERE
-  "plataforma" ilike '%{{TABLA_REPORTE.searchText}}%'
-ORDER BY
-  "{{TABLA_REPORTE.sortOrder.column || 'id'}}" {{TABLA_REPORTE.sortOrder.order !== "desc" ? "" : "DESC"}}
-LIMIT
+SELECT *
+FROM "marketing_analytics_v2"
+WHERE 
+  -- Filtro opcional de plataforma (si el selector está vacío, trae todo; si tiene algo, filtra)
+  (
+    '{{SELEC_PLATAFORMA.selectedOptionValue}}' = '' 
+    OR LOWER(plataforma) = LOWER('{{SELEC_PLATAFORMA.selectedOptionLabel}}')
+  )
+  -- Filtro de fechas con tus date pickers
+  AND LEFT("fecha"::text, 10)::date >= '{{FECHA1.formattedDate}}'::date 
+  AND LEFT("fecha"::text, 10)::date <= '{{FECHA2.formattedDate}}'::date
+ORDER BY 
+  "{{TABLA_REPORTE.sortOrder.column || 'id'}}" {{TABLA_REPORTE.sortOrder.order == "desc" ? "DESC" : "ASC"}}
+LIMIT 
   {{TABLA_REPORTE.pageSize}}
-OFFSET
+OFFSET 
   {{TABLA_REPORTE.pageOffset}}

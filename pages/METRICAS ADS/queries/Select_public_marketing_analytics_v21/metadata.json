@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  *\nFROM\n  public.marketing_analytics_v2\nWHERE\n  \"plataforma\" ilike '%{{TABLA_REPORTE.searchText}}%'\nORDER BY\n  \"{{TABLA_REPORTE.sortOrder.column || 'id'}}\" {{TABLA_REPORTE.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"}}\nLIMIT\n  {{TABLA_REPORTE.pageSize}}\nOFFSET\n  {{TABLA_REPORTE.pageOffset}}",
+      "body": "SELECT *\nFROM \"marketing_analytics_v2\"\nWHERE \n  -- Filtro opcional de plataforma (si el selector está vacío, trae todo; si tiene algo, filtra)\n  (\n    '{{SELEC_PLATAFORMA.selectedOptionValue}}' = '' \n    OR LOWER(plataforma) = LOWER('{{SELEC_PLATAFORMA.selectedOptionLabel}}')\n  )\n  -- Filtro de fechas con tus date pickers\n  AND LEFT(\"fecha\"::text, 10)::date >= '{{FECHA1.formattedDate}}'::date \n  AND LEFT(\"fecha\"::text, 10)::date <= '{{FECHA2.formattedDate}}'::date\nORDER BY \n  \"{{TABLA_REPORTE.sortOrder.column || 'id'}}\" {{TABLA_REPORTE.sortOrder.order == \"desc\" ? \"DESC\" : \"ASC\"}}\nLIMIT \n  {{TABLA_REPORTE.pageSize}}\nOFFSET \n  {{TABLA_REPORTE.pageOffset}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
