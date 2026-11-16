@@ -528,7 +528,7 @@
   "tableData": "{{ JSObject1.obtenerDatosConColor.data }}",
   "textColor": "#86efac",
   "textSize": "0.875rem",
-  "topRow": 51,
+  "topRow": 35,
   "totalRecordsCount": "{{Total_record_public_base_clientes1.data[0].count}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,
