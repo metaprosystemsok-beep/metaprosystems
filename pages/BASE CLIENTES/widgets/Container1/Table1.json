@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 47,
+  "bottomRow": 51,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -43,9 +43,11 @@
     "mensaje_enviado_mail",
     "mensaje_enviado_whatsapp"
   ],
-  "columnUpdatedAt": 1794601953815,
+  "columnUpdatedAt": 1794841536502,
   "columnWidthMap": {
     "email": 256,
+    "mensaje_enviado_mail": 225,
+    "mensaje_enviado_whatsapp": 254,
     "nombre_cliente": 220,
     "telefono": 185,
     "ultima_compra": 227
@@ -141,7 +143,7 @@
   "parentColumnSpace": 16.546875,
   "parentId": "v3ntwmff7v",
   "parentRowSpace": 10,
-  "primaryColumnId": "email",
+  "primaryColumnId": "telefono",
   "primaryColumns": {
     "dias_inactivo": {
       "alias": "dias_inactivo",
@@ -418,7 +420,7 @@
   "tableData": "{{tabla_clientes_inactivos.data}}",
   "textColor": "#ef4444",
   "textSize": "0.875rem",
-  "topRow": 9,
+  "topRow": 8,
   "totalRecordsCount": "{{Total_record_public_clientes_inactivos1.data[0].count}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,

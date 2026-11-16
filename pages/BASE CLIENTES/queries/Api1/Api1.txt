@@ -1,0 +1,7 @@
+{
+  "nombre_cliente": "{{ Table1.selectedRows[0].nombre_cliente }}",
+  "email": "{{ Table1.selectedRows[0].email }}",
+  "telefono": "{{ Table1.selectedRows[0].telefono }}",
+  "ultimo_compra": "{{ Table1.selectedRows[0].ultimo_compra }}",
+  "dias_inactivo": "{{ Table1.selectedRows[0].dias_inactivo }}"
+}

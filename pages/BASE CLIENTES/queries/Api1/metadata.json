@@ -11,17 +11,17 @@
           "value": "application/json"
         }
       ],
-      "body": "",
+      "body": "{\n  \"nombre_cliente\": \"{{ Table1.selectedRows[0].nombre_cliente }}\",\n  \"email\": \"{{ Table1.selectedRows[0].email }}\",\n  \"telefono\": \"{{ Table1.selectedRows[0].telefono }}\",\n  \"ultimo_compra\": \"{{ Table1.selectedRows[0].ultimo_compra }}\",\n  \"dias_inactivo\": \"{{ Table1.selectedRows[0].dias_inactivo }}\"\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "application/json"
       },
       "headers": [],
-      "httpMethod": "GET",
+      "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/webhook-test/daf15e7d-daba-447a-b9d3-9ed5f3a81016",
+      "path": "/webhook-test/9c3f25e5-cabc-4457-9562-e1fbb2f37d3c",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -39,7 +39,11 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "name": "Api1",
     "pageId": "BASE CLIENTES",
     "runBehaviour": "MANUAL",
