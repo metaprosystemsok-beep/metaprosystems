@@ -1,0 +1,2 @@
+DELETE FROM public.detalle_de_ventas
+WHERE id = ANY({{ tabla_venta.selectedRows.map(row => Number(row.id)) }});

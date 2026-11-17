@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "buttonColor": "#ef4444",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "h8ghgpi8mq",
+  "leftColumn": 0,
+  "minWidth": 120,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onClick": "(() => {\n    if (!tabla_venta.selectedRows || tabla_venta.selectedRows.length === 0) {\n        showAlert(\"No hay nada seleccionado\", \"warning\");\n    } else {\n        Query_borrar.run().then(async () => {\n            // Actualizamos el contador total de la paginación\n            await Total_record_public_detalle_de_ventas1.run();\n            \n            // Ejecutamos el JS Object (que internamente ya trae los datos nuevos de la SQL y pinta los colores)\n            await JSObject1.obtenerDatosConColor();\n\n            showAlert(\"Registros borrados con éxito\", \"success\");\n        }).catch(() => {\n            showAlert(\"Error al intentar borrar los registros\", \"error\");\n        });\n    }\n})();",
+  "parentColumnSpace": 16.546875,
+  "parentId": "b1a0r2fklp",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 17,
+  "text": "Borrar",
+  "topRow": 0,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "vaflrlt23e",
+  "widgetName": "Button1"
+}

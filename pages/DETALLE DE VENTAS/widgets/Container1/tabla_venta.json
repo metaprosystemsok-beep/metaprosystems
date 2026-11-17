@@ -64,9 +64,7 @@
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
-  "defaultSelectedRowIndices": [
-    0
-  ],
+  "defaultSelectedRowIndices": "[\n  \n]",
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
@@ -241,6 +239,7 @@
   "mobileLeftColumn": 0,
   "mobileRightColumn": 13,
   "mobileTopRow": 20,
+  "multiRowSelection": true,
   "needsErrorInfo": false,
   "onAddNewRowSave": "{{Insert_public_detalle_de_ventas1.run(() => {\n            showAlert(\"Successfully created!\");\n            Select_public_detalle_de_ventas1.run()\n          }, () => {\n            showAlert(\"Unable to create!\");\n          })}}",
   "onPageChange": "{{\n            Select_public_detalle_de_ventas1.run();\n            Total_record_public_detalle_de_ventas1.run()\n          }}",
@@ -716,7 +715,7 @@
   "tableData": "{{ JSObject1.obtenerDatosConColor.data }}",
   "textColor": "#86efac",
   "textSize": "0.875rem",
-  "topRow": 0,
+  "topRow": 7,
   "totalRecordsCount": "{{Total_record_public_detalle_de_ventas1.data[0].count}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,

@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "#ef4444",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "h8ghgpi8mq",
+  "leftColumn": 26,
+  "minWidth": 120,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 14,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onClick": "(() => {\n    if (!TABLA_CARRITOS_ABANDONADOS.selectedRows || TABLA_CARRITOS_ABANDONADOS.selectedRows.length === 0) {\n        showAlert(\"No hay nada seleccionado\", \"warning\");\n    } else {\n        Query_borrar.run().then(() => {\n            carritos_abandonados.run();\n            showAlert(\"Carritos borrados con éxito\", \"success\");\n        }).catch(() => {\n            showAlert(\"Error al intentar borrar los carritos\", \"error\");\n        });\n    }\n})();",
+  "parentColumnSpace": 16.546875,
+  "parentId": "t3iiy0fteh",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 40,
+  "text": "Borrar",
+  "topRow": 0,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "sc5s7su2ld",
+  "widgetName": "Button1"
+}

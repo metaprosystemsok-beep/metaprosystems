@@ -1,0 +1,2 @@
+DELETE FROM carritos_abandonados
+WHERE id = ANY({{TABLA_CARRITOS_ABANDONADOS.selectedRows.map(row => row.id)}});
