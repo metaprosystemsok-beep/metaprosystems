@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a3ae2b905dd9b2f221ae850_bf640aca-78ea-4633-9b1c-7f23c10fea4b",
-  "id": "BASE CLIENTES_Insert_public_clientes_inactivos1",
+  "gitSyncId": "6a3ae2b905dd9b2f221ae850_16c1135d-fb9f-4245-8d7a-96d313858121",
+  "id": "BASE CLIENTES_Total_record_public_clientes_ausentes1",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.clientes_inactivos (\"nombre_cliente\",\"email\",\"telefono\",\"ultima_compra\",\"dias_inactivo\") VALUES ('{{(Table1.newRow || {}).nombre_cliente}}','{{(Table1.newRow || {}).email}}','{{(Table1.newRow || {}).telefono}}','{{(Table1.newRow || {}).ultima_compra}}','{{(Table1.newRow || {}).dias_inactivo}}')",
+      "body": "SELECT COUNT(*) from public.clientes_ausentes where email ilike '%{{Table1.searchText}}%';",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "Insert_public_clientes_inactivos1",
+    "name": "Total_record_public_clientes_ausentes1",
     "pageId": "BASE CLIENTES",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

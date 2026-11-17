@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a3ae2b905dd9b2f221ae850_1c96b5a4-b80a-45c1-9ca1-95f929e2f876",
-  "id": "BASE CLIENTES_Update_public_clientes_inactivos1",
+  "gitSyncId": "6a3ae2b905dd9b2f221ae850_0c0ba81a-68b9-474a-b588-40724f379a8f",
+  "id": "BASE CLIENTES_Select_public_clientes_ausentes1",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE public.clientes_inactivos SET \"nombre_cliente\"= '{{Table1.updatedRow.nombre_cliente}}', \"email\"= '{{Table1.updatedRow.email}}', \"telefono\"= '{{Table1.updatedRow.telefono}}', \"ultima_compra\"= '{{Table1.updatedRow.ultima_compra}}', \"dias_inactivo\"= '{{Table1.updatedRow.dias_inactivo}}' WHERE \"id\"= {{Table1.updatedRow.id}};",
+      "body": "SELECT\n  *\nFROM\n  public.clientes_ausentes\nWHERE\n  \"email\" ilike '%{{Table1.searchText}}%'\nORDER BY\n  \"{{Table1.sortOrder.column || 'id'}}\" {{Table1.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"}}\nLIMIT\n  {{Table1.pageSize}}\nOFFSET\n  {{Table1.pageOffset}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "Update_public_clientes_inactivos1",
+    "name": "Select_public_clientes_ausentes1",
     "pageId": "BASE CLIENTES",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

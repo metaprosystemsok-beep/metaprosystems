@@ -1,0 +1,9 @@
+INSERT INTO public.clientes_ausentes (nombre_cliente, email, telefono, dias_sin_comprar)
+SELECT 
+    nombre_cliente, 
+    email, 
+    telefono, 
+    EXTRACT(DAY FROM (NOW() - ultima_compra::timestamp))::integer AS dias_sin_comprar
+FROM public.base_clientes
+WHERE ultima_compra::timestamp < NOW() - INTERVAL '45 days'
+ON CONFLICT (email) DO NOTHING;

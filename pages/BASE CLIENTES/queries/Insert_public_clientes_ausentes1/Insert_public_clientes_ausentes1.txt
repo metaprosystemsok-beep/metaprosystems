@@ -1,0 +1,1 @@
+INSERT INTO public.clientes_ausentes ("nombre_cliente","email","telefono","dias_sin_comprar","mensaje_whatsapp","mensaje_mail") VALUES ('{{(Table1.newRow || {}).nombre_cliente}}','{{(Table1.newRow || {}).email}}','{{(Table1.newRow || {}).telefono}}','{{(Table1.newRow || {}).dias_sin_comprar}}','{{(Table1.newRow || {}).mensaje_whatsapp}}','{{(Table1.newRow || {}).mensaje_mail}}')

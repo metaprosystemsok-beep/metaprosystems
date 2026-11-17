@@ -33,7 +33,7 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "(() => {\n    if (!Table1.selectedRows || Table1.selectedRows.length === 0) {\n        showAlert(\"Por favor, seleccioná al menos un cliente.\", \"warning\");\n        return;\n    }\n\n    Api1.run().then(() => {\n        showAlert('Mensaje enviado correctamente al cliente', 'success');\n    }).catch(() => {\n        showAlert('Error al enviar el mensaje', 'error');\n    });\n})();",
+  "onClick": "!Table1.selectedRows || Table1.selectedRows.length === 0 ? showAlert(\"Por favor, seleccioná al menos un cliente.\", \"warning\") : Api1.run().then(() => showAlert(\"Mensaje enviado correctamente\", \"success\"))",
   "parentColumnSpace": 16.859375,
   "parentId": "v3ntwmff7v",
   "parentRowSpace": 10,

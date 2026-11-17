@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 35,
+  "bottomRow": 37,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -34,29 +34,30 @@
     }
   },
   "columnOrder": [
+    "id",
     "nombre_cliente",
     "email",
     "telefono",
-    "ultima_compra",
-    "dias_inactivo",
-    "id",
-    "mensaje_enviado_mail",
-    "mensaje_enviado_whatsapp"
+    "dias_sin_comprar",
+    "mensaje_whatsapp",
+    "mensaje_mail",
+    "EditActions1"
   ],
-  "columnUpdatedAt": 1794841536502,
+  "columnUpdatedAt": 1794876310923,
   "columnWidthMap": {
-    "email": 256,
-    "mensaje_enviado_mail": 225,
-    "mensaje_enviado_whatsapp": 254,
-    "nombre_cliente": 220,
-    "telefono": 185,
-    "ultima_compra": 227
+    "dias_sin_comprar": 164,
+    "email": 227,
+    "mensaje_whatsapp": 182,
+    "nombre_cliente": 172,
+    "telefono": 180
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
-  "defaultSelectedRowIndices": "",
+  "defaultSelectedRowIndices": [
+    0
+  ],
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
@@ -72,6 +73,27 @@
       "key": "tableData"
     },
     {
+      "key": "totalRecordsCount"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveButtonColor"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.discardBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.id.computedValue"
+    },
+    {
       "key": "primaryColumns.nombre_cliente.computedValue"
     },
     {
@@ -81,27 +103,24 @@
       "key": "primaryColumns.telefono.computedValue"
     },
     {
-      "key": "primaryColumns.ultima_compra.computedValue"
+      "key": "primaryColumns.dias_sin_comprar.computedValue"
     },
     {
-      "key": "primaryColumns.dias_inactivo.computedValue"
+      "key": "primaryColumns.mensaje_whatsapp.computedValue"
     },
     {
-      "key": "primaryColumns.id.computedValue"
-    },
-    {
-      "key": "totalRecordsCount"
-    },
-    {
-      "key": "primaryColumns.mensaje_enviado_mail.computedValue"
-    },
-    {
-      "key": "primaryColumns.mensaje_enviado_whatsapp.computedValue"
+      "key": "primaryColumns.mensaje_mail.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -109,10 +128,16 @@
       "key": "onPageChange"
     },
     {
+      "key": "onSearchTextChanged"
+    },
+    {
       "key": "onSort"
     },
     {
       "key": "onAddNewRowSave"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
     }
   ],
   "enableClientSideSearch": true,
@@ -127,37 +152,84 @@
   "isVisibleFilters": false,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
-  "key": "1n8dworu0g",
+  "key": "ba9gddztv7",
   "label": "Data",
   "leftColumn": 0,
   "minWidth": 450,
   "mobileBottomRow": 36,
   "mobileLeftColumn": 0,
-  "mobileRightColumn": 11,
+  "mobileRightColumn": 7,
   "mobileTopRow": 8,
   "multiRowSelection": true,
   "needsErrorInfo": false,
-  "onAddNewRowSave": "{{Insert_public_clientes_inactivos1.run()}}",
-  "onPageChange": "{{Total_record_public_clientes_inactivos1.run();\ntabla_clientes_inactivos.run()}}",
-  "onSort": "{{Total_record_public_clientes_inactivos1.run();\ntabla_clientes_inactivos.run()}}",
+  "onAddNewRowSave": "{{Insert_public_clientes_ausentes1.run(() => {\n            showAlert(\"Successfully created!\");\n            Select_public_clientes_ausentes1.run()\n          }, () => {\n            showAlert(\"Unable to create!\");\n          })}}",
+  "onPageChange": "{{\n            Select_public_clientes_ausentes1.run();\n            Total_record_public_clientes_ausentes1.run()\n          }}",
+  "onSearchTextChanged": "{{\n            Select_public_clientes_ausentes1.run();\n            Total_record_public_clientes_ausentes1.run()\n          }}",
+  "onSort": "{{\n            Select_public_clientes_ausentes1.run();\n            Total_record_public_clientes_ausentes1.run()\n          }}",
   "parentColumnSpace": 16.546875,
   "parentId": "v3ntwmff7v",
   "parentRowSpace": 10,
-  "primaryColumnId": "telefono",
+  "primaryColumnId": "email",
   "primaryColumns": {
-    "dias_inactivo": {
-      "alias": "dias_inactivo",
+    "EditActions1": {
+      "alias": "EditActions1",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "cellBackground": "#18181b",
+      "columnType": "editActions",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "discardActionLabel": "Discard",
+      "discardBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "discardButtonColor": "#F22B2B",
+      "discardButtonVariant": "TERTIARY",
+      "discardIconAlign": "left",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "EditActions1",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "Save / Discard",
+      "notation": "standard",
+      "onSave": "{{Update_public_clientes_ausentes1.run(() => {\n            showAlert(\"Successfully saved!\");\n            Select_public_clientes_ausentes1.run()\n          }, () => {\n            showAlert(\"Unable to save!\");\n          })}}",
+      "originalId": "EditActions1",
+      "saveActionLabel": "Save",
+      "saveBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "saveButtonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "saveIconAlign": "left",
+      "sticky": "right",
+      "textColor": "#ef4444",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "dias_sin_comprar": {
+      "alias": "dias_sin_comprar",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "#18181b",
       "columnType": "number",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"dias_inactivo\"])) : dias_inactivo })()}}",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"dias_sin_comprar\"])) : dias_sin_comprar })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "horizontalAlignment": "LEFT",
-      "id": "dias_inactivo",
+      "id": "dias_sin_comprar",
       "index": 4,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -167,9 +239,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "dias_inactivo",
+      "label": "dias_sin_comprar",
       "notation": "standard",
-      "originalId": "dias_inactivo",
+      "originalId": "dias_sin_comprar",
       "sticky": "",
       "textColor": "#ef4444",
       "textSize": "0.875rem",
@@ -191,7 +263,7 @@
       "enableSort": true,
       "horizontalAlignment": "LEFT",
       "id": "email",
-      "index": 1,
+      "index": 2,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -224,7 +296,7 @@
       "enableSort": true,
       "horizontalAlignment": "LEFT",
       "id": "id",
-      "index": 5,
+      "index": 0,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -244,20 +316,19 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "mensaje_enviado_mail": {
-      "alias": "mensaje_enviado_mail",
+    "mensaje_mail": {
+      "alias": "mensaje_mail",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "#18181b",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"mensaje_enviado_mail\"])) : mensaje_enviado_mail })()}}",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"mensaje_mail\"])) : mensaje_mail })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
-      "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "mensaje_enviado_mail",
+      "id": "mensaje_mail",
       "index": 6,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -267,9 +338,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "mensaje_enviado_mail",
+      "label": "mensaje_mail",
       "notation": "standard",
-      "originalId": "mensaje_enviado_mail",
+      "originalId": "mensaje_mail",
       "sticky": "",
       "textColor": "#ef4444",
       "textSize": "0.875rem",
@@ -278,21 +349,20 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "mensaje_enviado_whatsapp": {
-      "alias": "mensaje_enviado_whatsapp",
+    "mensaje_whatsapp": {
+      "alias": "mensaje_whatsapp",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "#18181b",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"mensaje_enviado_whatsapp\"])) : mensaje_enviado_whatsapp })()}}",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"mensaje_whatsapp\"])) : mensaje_whatsapp })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
-      "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "mensaje_enviado_whatsapp",
-      "index": 7,
+      "id": "mensaje_whatsapp",
+      "index": 5,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -301,9 +371,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "mensaje_enviado_whatsapp",
+      "label": "mensaje_whatsapp",
       "notation": "standard",
-      "originalId": "mensaje_enviado_whatsapp",
+      "originalId": "mensaje_whatsapp",
       "sticky": "",
       "textColor": "#ef4444",
       "textSize": "0.875rem",
@@ -325,7 +395,7 @@
       "enableSort": true,
       "horizontalAlignment": "LEFT",
       "id": "nombre_cliente",
-      "index": 0,
+      "index": 1,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -358,7 +428,7 @@
       "enableSort": true,
       "horizontalAlignment": "LEFT",
       "id": "telefono",
-      "index": 2,
+      "index": 3,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -377,39 +447,6 @@
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
-    },
-    "ultima_compra": {
-      "alias": "ultima_compra",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "#18181b",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ultima_compra\"])) : ultima_compra })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "ultima_compra",
-      "index": 3,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "ultima_compra",
-      "notation": "standard",
-      "originalId": "ultima_compra",
-      "sticky": "",
-      "textColor": "#ef4444",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
     }
   },
   "renderMode": "CANVAS",
@@ -417,14 +454,14 @@
   "rightColumn": 64,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
-  "tableData": "{{tabla_clientes_inactivos.data}}",
+  "tableData": "{{Select_public_clientes_ausentes1.data}}",
   "textColor": "#ef4444",
   "textSize": "0.875rem",
   "topRow": 9,
-  "totalRecordsCount": "{{Total_record_public_clientes_inactivos1.data[0].count}}",
+  "totalRecordsCount": "{{Total_record_public_clientes_ausentes1.data[0].count}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "ko9oqfvo8h",
+  "widgetId": "vbxxzqi5yb",
   "widgetName": "Table1"
 }

@@ -1,3 +1,2 @@
-INSERT INTO public.clientes_inactivos (email)
-SELECT unnest(string_to_array('{{ Table1.selectedRows?.map(r => r.email).join(",") || "" }}', ','))
-ON CONFLICT DO NOTHING;
+DELETE FROM public.clientes_ausentes
+WHERE email = ANY(array[{{ Table1.selectedRows.map(r => r.email).join("','") }}]::text[]);

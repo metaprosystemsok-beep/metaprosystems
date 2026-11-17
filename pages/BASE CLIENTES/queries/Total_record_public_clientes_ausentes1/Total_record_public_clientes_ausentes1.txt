@@ -1,0 +1,1 @@
+SELECT COUNT(*) from public.clientes_ausentes where email ilike '%{{Table1.searchText}}%';
