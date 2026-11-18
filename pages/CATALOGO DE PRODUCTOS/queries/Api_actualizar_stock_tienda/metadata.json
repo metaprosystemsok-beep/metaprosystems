@@ -46,7 +46,7 @@
     ],
     "name": "Api_actualizar_stock_tienda",
     "pageId": "CATALOGO DE PRODUCTOS",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": true
   }
 }

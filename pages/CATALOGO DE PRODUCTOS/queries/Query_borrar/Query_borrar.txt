@@ -1,0 +1,2 @@
+DELETE FROM ventas_y_finanzas 
+WHERE id = {{ ventas_y_finanzas.selectedRow.id }};

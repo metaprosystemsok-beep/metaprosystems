@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 83,
+  "bottomRow": 699,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -42,10 +42,9 @@
     "tarjeta_credito",
     "stock",
     "id",
-    "id_productos",
-    "EditActions1"
+    "id_productos"
   ],
-  "columnUpdatedAt": 1794412768090,
+  "columnUpdatedAt": 1794957412893,
   "columnWidthMap": {
     "costo": 99,
     "customColumn1": 106,
@@ -55,7 +54,7 @@
     "porcentaje_tarjeta": 142,
     "stock": 95,
     "tarjeta_credito": 138,
-    "transferencia_efectivo": 147
+    "transferencia_efectivo": 158
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -80,12 +79,6 @@
     },
     {
       "key": "totalRecordsCount"
-    },
-    {
-      "key": "primaryColumns.EditActions1.saveBorderRadius"
-    },
-    {
-      "key": "primaryColumns.EditActions1.discardBorderRadius"
     },
     {
       "key": "primaryColumns.id.computedValue"
@@ -120,10 +113,7 @@
       "key": "tableData"
     },
     {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
+      "key": "onRowSelected"
     }
   ],
   "dynamicTriggerPathList": [
@@ -137,7 +127,7 @@
       "key": "onAddNewRowSave"
     },
     {
-      "key": "primaryColumns.EditActions1.onSave"
+      "key": "onRowSelected"
     }
   ],
   "enableClientSideSearch": true,
@@ -165,6 +155,7 @@
   "needsErrorInfo": false,
   "onAddNewRowSave": "{{ventas_finanzas_insert.run(() => {\n            showAlert(\"Successfully created!\");\n            ventas_finanzas_catalo_product.run()\n          }, () => {\n            showAlert(\"Unable to create!\");\n          })}}",
   "onPageChange": "{{\n            ventas_finanzas_catalo_product.run();\n            ventas_y_finazas.run()\n          }}",
+  "onRowSelected": "(() => {\n  storeValue(\"modoEdicion\", true);\n  showModal(\"Modal1\");\n})()",
   "onSort": "{{\n            ventas_finanzas_catalo_product.run();\n            ventas_y_finazas.run()\n          }}",
   "originalBottomRow": 608,
   "originalTopRow": 69,
@@ -173,52 +164,6 @@
   "parentRowSpace": 10,
   "primaryColumnId": "id",
   "primaryColumns": {
-    "EditActions1": {
-      "alias": "EditActions1",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "buttonStyle": "rgb(3, 179, 101)",
-      "cellBackground": "#18181b",
-      "columnType": "editActions",
-      "computedValue": "",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "discardActionLabel": "Discard",
-      "discardBorderRadius": "{{ventas_y_finanzas.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "discardButtonColor": "#F22B2B",
-      "discardButtonVariant": "TERTIARY",
-      "discardIconAlign": "left",
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "EditActions1",
-      "index": 0,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": true,
-      "isDisabled": false,
-      "isDiscardDisabled": "",
-      "isDiscardVisible": false,
-      "isEditable": false,
-      "isSaveDisabled": "false",
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Save / Discard",
-      "notation": "standard",
-      "onSave": "{{ventas_finanzas_catalo_product.run();\nventas_finanzas_update.run()}}",
-      "originalId": "EditActions1",
-      "saveActionLabel": "Save",
-      "saveBorderRadius": "{{ventas_y_finanzas.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "saveButtonColor": "#22c55e",
-      "saveIconAlign": "left",
-      "sticky": "",
-      "textColor": "#86efac",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "costo": {
       "alias": "costo",
       "allowCellWrapping": false,
@@ -234,12 +179,12 @@
       "horizontalAlignment": "RIGHT",
       "id": "costo",
       "index": 2,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "costo",
@@ -336,12 +281,12 @@
       "horizontalAlignment": "LEFT",
       "id": "nombre_producto",
       "index": 1,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "nombre_producto",
@@ -370,12 +315,12 @@
       "horizontalAlignment": "RIGHT",
       "id": "porcentaje",
       "index": 3,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "porcentaje",
@@ -404,12 +349,12 @@
       "horizontalAlignment": "RIGHT",
       "id": "porcentaje_tarjeta",
       "index": 8,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "porcentaje_tarjeta",
@@ -438,12 +383,12 @@
       "horizontalAlignment": "CENTER",
       "id": "stock",
       "index": 6,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "stock",
@@ -528,14 +473,14 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 63,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{ventas_finanzas_catalo_product.data}}",
   "textColor": "#86efac",
   "textSize": "0.875rem",
-  "topRow": 6,
+  "topRow": 9,
   "totalRecordsCount": "{{ventas_y_finazas.data[0].count}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,

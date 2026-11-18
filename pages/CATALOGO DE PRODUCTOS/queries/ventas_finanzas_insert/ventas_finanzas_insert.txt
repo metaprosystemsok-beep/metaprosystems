@@ -1,18 +1,25 @@
 INSERT INTO public.ventas_y_finanzas (
     "nombre_producto",
-    "costo",
-    "porcentaje",
-    "transferencia_efectivo",
-    "tarjeta_credito",
+    "id_productos",
+    "id",
     "stock",
-    "id_variante"
+    "costo",
+    "porcentaje_tarjeta",
+    "porcentaje"
 )
 SELECT 
-    {{ (ventas_y_finanzas.newRow || {}).nombre_producto }},
-    {{ Number((ventas_y_finanzas.newRow || {}).costo) || 0 }},
-    {{ Number((ventas_y_finanzas.newRow || {}).porcentaje) || 0 }},
-    {{ Number((ventas_y_finanzas.newRow || {}).transferencia_efectivo) || 0 }},
-    {{ Number((ventas_y_finanzas.newRow || {}).tarjeta_credito) || 0 }},
-    {{ Number((ventas_y_finanzas.newRow || {}).stock) || 0 }},
-    {{ Number((ventas_y_finanzas.newRow || {}).id_variante) || null }}
-WHERE {{ !!(ventas_y_finanzas.newRow || {}).nombre_producto }};
+    '{{ Input1.text }}',
+    {{ Number(Input2.text) || 0 }},
+    {{ Number(Input3.text) }},
+    {{ Number(Input4.text) || 0 }},
+    {{ Number(Input5.text) || 0 }},
+    {{ Number(Input6.text) || 0 }},
+    {{ Number(Input7.text) || 0 }}
+WHERE {{ Boolean(Input3.text) }}
+ON CONFLICT ("id") DO UPDATE SET
+    "nombre_producto" = EXCLUDED."nombre_producto",
+    "id_productos" = EXCLUDED."id_productos",
+    "stock" = EXCLUDED."stock",
+    "costo" = EXCLUDED."costo",
+    "porcentaje_tarjeta" = EXCLUDED."porcentaje_tarjeta",
+    "porcentaje" = EXCLUDED."porcentaje";
