@@ -22,10 +22,10 @@
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
-      "key": "onDateSelected"
+      "key": "defaultDate"
     },
     {
-      "key": "defaultDate"
+      "key": "dateFormat"
     }
   ],
   "dynamicTriggerPathList": [
@@ -56,7 +56,9 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onDateSelected": "carritos_abandonados.run()",
+  "onDateSelected": "{{carritos_abandonados.run();\nQuery_cantidad_carritos.run();\nQuery_columna_total.run()}}",
+  "originalBottomRow": 19,
+  "originalTopRow": 11,
   "parentColumnSpace": 19.9375,
   "parentId": "t3iiy0fteh",
   "parentRowSpace": 10,
