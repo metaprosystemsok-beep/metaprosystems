@@ -339,7 +339,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 62,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
   "tableData": "{{Query_calendario.data}}",

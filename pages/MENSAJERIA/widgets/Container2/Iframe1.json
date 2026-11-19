@@ -3,7 +3,7 @@
   "borderOpacity": 100,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": 1,
-  "bottomRow": 101,
+  "bottomRow": 104,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "dynamicBindingPathList": [
     {
@@ -24,6 +24,8 @@
   "mobileRightColumn": 13,
   "mobileTopRow": 58,
   "needsErrorInfo": false,
+  "originalBottomRow": 102,
+  "originalTopRow": 18,
   "parentColumnSpace": 16.546875,
   "parentId": "iu1ta9kijf",
   "parentRowSpace": 10,
@@ -31,7 +33,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "source": "https://agencia-chatwoot.f5jcmo.easypanel.host/app/accounts/2/inbox-view",
-  "topRow": 31,
+  "topRow": 16,
   "type": "IFRAME_WIDGET",
   "version": 1,
   "widgetId": "1ken5cdpwf",

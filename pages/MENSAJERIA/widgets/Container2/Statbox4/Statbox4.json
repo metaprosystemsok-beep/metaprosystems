@@ -4,7 +4,7 @@
   "borderColor": "{{appsmith.theme.colors.backgroundColor}}",
   "borderRadius": "0px",
   "borderWidth": "1",
-  "bottomRow": 31,
+  "bottomRow": 16,
   "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
   "children": [
     {
@@ -76,9 +76,9 @@
   "positioning": "fixed",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 21,
+  "rightColumn": 11,
   "shouldScrollContents": true,
-  "topRow": 15,
+  "topRow": 0,
   "type": "STATBOX_WIDGET",
   "widgetId": "seyiqkid10",
   "widgetName": "Statbox4"
