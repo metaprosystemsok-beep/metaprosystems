@@ -40,7 +40,7 @@
   "parentId": "mhuab9owdx",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 60,
   "shouldTruncate": false,
   "text": "{{ (Query_msj_metricas_interaccion.data[0].total_hoy - Query_msj_metricas_interaccion.data[0].total_ayer) >= 0 ? \"+\" + (Query_msj_metricas_interaccion.data[0].total_hoy - Query_msj_metricas_interaccion.data[0].total_ayer) + \" vs ayer\" : (Query_msj_metricas_interaccion.data[0].total_hoy - Query_msj_metricas_interaccion.data[0].total_ayer) + \" vs ayer\" }}",
   "textAlign": "LEFT",
