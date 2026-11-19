@@ -47,12 +47,12 @@
   "columnUpdatedAt": 1790128984163,
   "columnWidthMap": {
     "cantidad": 104,
-    "fecha": 178,
+    "fecha": 190,
     "id": 106,
-    "nombre_empresa": 158,
+    "nombre_empresa": 140,
     "nombre_producto": 284,
-    "precio_unitario": 139,
-    "subtotal": 138
+    "precio_unitario": 126,
+    "subtotal": 94
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",

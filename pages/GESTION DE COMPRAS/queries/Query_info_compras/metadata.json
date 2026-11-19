@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COALESCE(SUM(total_general_orden), 0) AS total_compras \nFROM public.gestion_compras \nWHERE fecha::date >= COALESCE('{{ moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\") }}', '2026-10-01')::date \n  AND fecha::date <= COALESCE('{{ moment(DatePicker2.selectedDate).format(\"YYYY-MM-DD\") }}', '2026-10-31')::date\n  AND ('{{ Select1.selectedOptionValue }}' = '' OR nombre_empresa = '{{ Select1.selectedOptionValue }}')",
+      "body": "SELECT COALESCE(SUM(subtotal), 0) AS total_compras \nFROM public.gestion_compras \nWHERE fecha::date >= COALESCE('{{ moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\") }}', '2026-10-01')::date \n  AND fecha::date <= COALESCE('{{ moment(DatePicker2.selectedDate).format(\"YYYY-MM-DD\") }}', '2026-10-31')::date\n  AND ('{{ Select1.selectedOptionValue }}' = '' OR nombre_empresa = '{{ Select1.selectedOptionValue }}')",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
