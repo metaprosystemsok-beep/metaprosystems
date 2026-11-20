@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 21,
   "shouldTruncate": false,
-  "text": "{{\n  \"$\" + (Select_public_gastos1.data || [])\n    .filter(r => {\n      const f = String(r.fecha || \"\").slice(0, 10);\n      const desdeOk = !DatePicker7.formattedDate || f >= DatePicker7.formattedDate;\n      const hastaOk = !DatePicker6.formattedDate || f <= DatePicker6.formattedDate;\n      const sectorOk = !Select2.selectedOptionValue || r.sector === Select2.selectedOptionValue;\n      return desdeOk && hastaOk && sectorOk;\n    })\n    .reduce((acc, r) => acc + Number(r.total || 0), 0)\n    .toLocaleString(\"es-AR\")\n}}",
+  "text": "{{\n   (Select_public_gastos1.data || [])\n    .filter(r => {\n      const f = String(r.fecha || \"\").slice(0, 10);\n      const desdeOk = !DatePicker7.formattedDate || f >= DatePicker7.formattedDate;\n      const hastaOk = !DatePicker6.formattedDate || f <= DatePicker6.formattedDate;\n      const sectorOk = !Select2.selectedOptionValue || r.sector === Select2.selectedOptionValue;\n      return desdeOk && hastaOk && sectorOk;\n    })\n    .reduce((acc, r) => acc + Number(r.total || 0), 0)\n    .toLocaleString(\"es-AR\")\n}}",
   "textAlign": "LEFT",
   "textColor": "#ef4444",
   "topRow": 4,

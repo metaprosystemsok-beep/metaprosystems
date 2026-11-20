@@ -34,7 +34,7 @@
   "mobileTopRow": 49,
   "needsErrorInfo": false,
   "onClick": "{{\n  storeValue(\"modoGasto\", \"nuevo\");\n  resetWidget(\"DatePicker5\", true);\n  resetWidget(\"Input1\", true);\n  resetWidget(\"Input3\", true);\n  resetWidget(\"Input2\", true);\n  showModal(\"Modal1\");\n}}",
-  "originalBottomRow": 29,
+  "originalBottomRow": 30,
   "originalTopRow": 25,
   "parentColumnSpace": 16.546875,
   "parentId": "agxp4sn202",

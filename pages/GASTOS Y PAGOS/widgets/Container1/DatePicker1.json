@@ -56,7 +56,7 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "onDateSelected": "{{facturacion_neta.run();\nbalance_mensual.run()}}",
+  "onDateSelected": "{{facturacion_neta.run()}}",
   "originalBottomRow": 16,
   "originalTopRow": 9,
   "parentColumnSpace": 16.546875,

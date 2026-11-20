@@ -11,7 +11,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
@@ -24,6 +28,7 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 48,
   "needsErrorInfo": false,
+  "onClick": "{{navigateTo('GASTOS Y PAGOS', {}, 'SAME_WINDOW');}}",
   "parentColumnSpace": 16.546875,
   "parentId": "i26vksivp7",
   "parentRowSpace": 10,
