@@ -43,7 +43,7 @@
   "columnUpdatedAt": 1795133888639,
   "columnWidthMap": {
     "detalle": 196.00000000000003,
-    "fecha": 108,
+    "fecha": 107,
     "id": 88,
     "sector": 122
   },
@@ -140,8 +140,8 @@
   "onRowSelected": "{{\n  storeValue(\"modoGasto\", \"editar\");\n  showModal(\"Modal1\");\n}}",
   "onSearchTextChanged": "{{\n            Select_public_gastos1.run();\n            Total_record_public_gastos1.run()\n          }}",
   "onSort": "{{\n            Select_public_gastos1.run();\n            Total_record_public_gastos1.run()\n          }}",
-  "originalBottomRow": 111,
-  "originalTopRow": 33,
+  "originalBottomRow": 112,
+  "originalTopRow": 32,
   "parentColumnSpace": 16.859375,
   "parentId": "agxp4sn202",
   "parentRowSpace": 10,

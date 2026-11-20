@@ -24,8 +24,8 @@ WHERE
     COALESCE(TRIM('{{ Select1.selectedOptionValue || "" }}'), '') = ''
     OR (
       TRIM(detalle) ILIKE TRIM('{{ Select1.selectedOptionValue || "" }}')
-      AND ('{{ DatePicker4.formattedDate || "" }}' = '' OR CAST(fecha AS DATE) >= CAST('{{ DatePicker4.formattedDate || "" }}' AS DATE))
-      AND ('{{ DatePicker3.formattedDate || "" }}' = '' OR CAST(fecha AS DATE) <= CAST('{{ DatePicker3.formattedDate || "" }}' AS DATE))
+      AND ('{{ DatePicker7.formattedDate || "" }}' = '' OR CAST(fecha AS DATE) >= CAST('{{ DatePicker7.formattedDate || "" }}' AS DATE))
+      AND ('{{ DatePicker6.formattedDate || "" }}' = '' OR CAST(fecha AS DATE) <= CAST('{{ DatePicker6.formattedDate || "" }}' AS DATE))
     )
   )
 ORDER BY fecha DESC
