@@ -41,7 +41,8 @@
   ],
   "columnUpdatedAt": 1795136882991,
   "columnWidthMap": {
-    "detalle": 216
+    "detalle": 406,
+    "fecha": 111
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -134,7 +135,7 @@
   "isVisibleSearch": true,
   "key": "phvzu438o1",
   "label": "Data",
-  "leftColumn": 34,
+  "leftColumn": 32,
   "minWidth": 450,
   "mobileBottomRow": 46,
   "mobileLeftColumn": 14,

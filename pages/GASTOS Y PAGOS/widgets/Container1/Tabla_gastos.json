@@ -42,10 +42,10 @@
   ],
   "columnUpdatedAt": 1795133888639,
   "columnWidthMap": {
-    "detalle": 196.00000000000003,
-    "fecha": 108,
+    "detalle": 275,
+    "fecha": 114,
     "id": 88,
-    "sector": 158
+    "sector": 129
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -315,7 +315,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 34,
+  "rightColumn": 32,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
   "showInlineEditingOptionDropdown": true,

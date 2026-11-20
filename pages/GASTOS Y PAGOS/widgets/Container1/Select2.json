@@ -54,7 +54,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 33,
+  "rightColumn": 32,
   "serverSideFiltering": false,
   "sourceData": "{{ [{ label: \"Todos\", value: \"\" }, ...Array.from(new Set((Select_public_gastos1.data || []).map(r => r.sector).filter(Boolean))).map(v => ({ label: v, value: v }))] }}",
   "topRow": 17,
