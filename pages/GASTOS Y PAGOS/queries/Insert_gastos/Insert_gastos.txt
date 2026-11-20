@@ -1,0 +1,16 @@
+INSERT INTO public.gastos (
+  fecha,
+  sector,
+  detalle,
+  total
+)
+SELECT
+  {{ DatePicker5.formattedDate ? DatePicker5.formattedDate : null }}::date,
+  NULLIF(TRIM({{ Input1.text || '' }}), ''),
+  NULLIF(TRIM({{ Input3.text || '' }}), ''),
+  NULLIF({{ Input2.text || '' }}, '')::numeric
+WHERE
+  {{ DatePicker5.formattedDate ? true : false }}
+  AND LENGTH(TRIM({{ Input1.text || '' }})) > 0
+  AND LENGTH(TRIM({{ Input3.text || '' }})) > 0
+  AND {{ Number(Input2.text) > 0 }};

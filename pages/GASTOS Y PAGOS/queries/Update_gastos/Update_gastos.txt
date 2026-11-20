@@ -1,0 +1,7 @@
+UPDATE public.gastos
+SET
+  fecha = {{ DatePicker5.formattedDate }},
+  sector = {{ Input1.text }},
+  detalle = {{ Input3.text }},
+  total = {{ Number(Input2.text) }}
+WHERE id = {{ Tabla_gastos.selectedRow.id }};

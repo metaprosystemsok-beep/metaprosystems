@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 30,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "9yqbe7orpr",
+  "leftColumn": 8,
+  "minWidth": 120,
+  "mobileBottomRow": 53,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 13,
+  "mobileTopRow": 49,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  storeValue(\"modoGasto\", \"nuevo\");\n  resetWidget(\"DatePicker5\", true);\n  resetWidget(\"Input1\", true);\n  resetWidget(\"Input3\", true);\n  resetWidget(\"Input2\", true);\n  showModal(\"Modal1\");\n}}",
+  "originalBottomRow": 29,
+  "originalTopRow": 25,
+  "parentColumnSpace": 16.546875,
+  "parentId": "agxp4sn202",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 24,
+  "text": "Nuevo ",
+  "topRow": 25,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "wdal48vui0",
+  "widgetName": "Button3"
+}

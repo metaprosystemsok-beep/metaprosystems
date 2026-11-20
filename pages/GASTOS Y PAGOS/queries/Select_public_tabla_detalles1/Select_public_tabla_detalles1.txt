@@ -1,0 +1,33 @@
+SELECT DISTINCT
+  to_char(CAST(fecha AS DATE), 'YYYY-MM-DD') AS fecha,
+  CASE
+    WHEN COALESCE(TRIM('{{ Select2.selectedOptionValue || "" }}'), '') <> ''
+      THEN TRIM(sector)
+    ELSE TRIM(detalle)
+  END AS detalle,
+  total
+FROM public.gastos
+WHERE
+  (
+    COALESCE(TRIM('{{ Select2.selectedOptionValue || "" }}'), '') <> ''
+    OR COALESCE(TRIM('{{ Select1.selectedOptionValue || "" }}'), '') <> ''
+  )
+  AND (
+    COALESCE(TRIM('{{ Select2.selectedOptionValue || "" }}'), '') = ''
+    OR (
+      TRIM(sector) ILIKE TRIM('{{ Select2.selectedOptionValue || "" }}')
+      AND ('{{ DatePicker7.formattedDate || "" }}' = '' OR CAST(fecha AS DATE) >= CAST('{{ DatePicker7.formattedDate || "" }}' AS DATE))
+      AND ('{{ DatePicker6.formattedDate || "" }}' = '' OR CAST(fecha AS DATE) <= CAST('{{ DatePicker6.formattedDate || "" }}' AS DATE))
+    )
+  )
+  AND (
+    COALESCE(TRIM('{{ Select1.selectedOptionValue || "" }}'), '') = ''
+    OR (
+      TRIM(detalle) ILIKE TRIM('{{ Select1.selectedOptionValue || "" }}')
+      AND ('{{ DatePicker4.formattedDate || "" }}' = '' OR CAST(fecha AS DATE) >= CAST('{{ DatePicker4.formattedDate || "" }}' AS DATE))
+      AND ('{{ DatePicker3.formattedDate || "" }}' = '' OR CAST(fecha AS DATE) <= CAST('{{ DatePicker3.formattedDate || "" }}' AS DATE))
+    )
+  )
+ORDER BY fecha DESC
+LIMIT {{ Tabla_detalle.pageSize || 10 }}
+OFFSET {{ ((Tabla_detalle.pageNo || 1) - 1) * (Tabla_detalle.pageSize || 10) }};

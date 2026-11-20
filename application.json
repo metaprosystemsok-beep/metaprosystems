@@ -73,6 +73,10 @@
     {
       "id": "REPORTE AUDITORIA CONSULTORIA",
       "isDefault": false
+    },
+    {
+      "id": "GASTOS Y PAGOS",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

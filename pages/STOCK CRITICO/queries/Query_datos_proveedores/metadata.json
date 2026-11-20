@@ -29,7 +29,7 @@
     ],
     "name": "Query_datos_proveedores",
     "pageId": "STOCK CRITICO",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

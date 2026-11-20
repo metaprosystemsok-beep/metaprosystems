@@ -1,0 +1,2 @@
+DELETE FROM public.gastos 
+WHERE id = {{ Tabla_gastos.selectedRow.id }};

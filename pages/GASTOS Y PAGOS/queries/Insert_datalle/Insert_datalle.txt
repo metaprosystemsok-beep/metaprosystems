@@ -1,0 +1,25 @@
+SELECT
+  to_char(CAST(fecha AS DATE), 'YYYY-MM-DD') AS fecha,
+  detalle,
+  total
+FROM public.tabla_detalles
+WHERE
+  (
+    COALESCE(TRIM('{{ Select2.selectedOptionValue || "" }}'), '') <> ''
+    OR COALESCE(TRIM('{{ Select1.selectedOptionValue || "" }}'), '') <> ''
+  )
+  AND (
+    COALESCE(TRIM('{{ Select1.selectedOptionValue || "" }}'), '') = ''
+    OR TRIM(detalle) = TRIM('{{ Select1.selectedOptionValue || "" }}')
+  )
+  AND (
+    '{{ DatePicker4.formattedDate || "" }}' = ''
+    OR CAST(fecha AS DATE) >= CAST('{{ DatePicker4.formattedDate || "" }}' AS DATE)
+  )
+  AND (
+    '{{ DatePicker3.formattedDate || "" }}' = ''
+    OR CAST(fecha AS DATE) <= CAST('{{ DatePicker3.formattedDate || "" }}' AS DATE)
+  )
+ORDER BY CAST(fecha AS DATE) DESC
+LIMIT {{ Tabla_detalle.pageSize || 10 }}
+OFFSET {{ ((Tabla_detalle.pageNo || 1) - 1) * (Tabla_detalle.pageSize || 10) }};

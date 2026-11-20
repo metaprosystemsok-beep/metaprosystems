@@ -29,7 +29,7 @@
     ],
     "name": "Total_record_public_stock_critico1",
     "pageId": "STOCK CRITICO",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

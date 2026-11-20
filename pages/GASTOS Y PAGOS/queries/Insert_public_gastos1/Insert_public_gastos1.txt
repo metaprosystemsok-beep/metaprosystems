@@ -1,0 +1,1 @@
+INSERT INTO public.gastos ("fecha","sector","detalle","total") VALUES ('{{(Tabla_gastos.newRow || {}).fecha}}','{{(Tabla_gastos.newRow || {}).sector}}','{{(Tabla_gastos.newRow || {}).detalle}}','{{(Tabla_gastos.newRow || {}).total}}')

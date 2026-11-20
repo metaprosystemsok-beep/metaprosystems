@@ -1,0 +1,14 @@
+SELECT
+  COALESCE((
+    SELECT SUM(CAST(total_venta AS NUMERIC))
+    FROM detalle_de_ventas
+    WHERE ('{{ DatePicker2.formattedDate || "" }}' = '' OR CAST(fecha AS DATE) >= CAST('{{ DatePicker2.formattedDate || "" }}' AS DATE))
+      AND ('{{ DatePicker1.formattedDate || "" }}' = '' OR CAST(fecha AS DATE) <= CAST('{{ DatePicker1.formattedDate || "" }}' AS DATE))
+  ), 0)
+  -
+  COALESCE((
+    SELECT SUM(CAST(total AS NUMERIC))
+    FROM public.gastos
+    WHERE ('{{ DatePicker7.formattedDate || "" }}' = '' OR CAST(fecha AS DATE) >= CAST('{{ DatePicker7.formattedDate || "" }}' AS DATE))
+      AND ('{{ DatePicker6.formattedDate || "" }}' = '' OR CAST(fecha AS DATE) <= CAST('{{ DatePicker6.formattedDate || "" }}' AS DATE))
+  ), 0) AS resultado;

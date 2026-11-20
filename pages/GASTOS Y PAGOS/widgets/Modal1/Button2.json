@@ -1,0 +1,51 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 26,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "9yqbe7orpr",
+  "leftColumn": 45,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (() => {\n    const fechaOk = Boolean(DatePicker5.formattedDate);\n    const sectorOk = Boolean(Input1.text && Input1.text.trim() !== \"\");\n    const detalleOk = Boolean(Input3.text && Input3.text.trim() !== \"\");\n    const totalNum = Number(Input2.text);\n    const totalOk = Input2.text !== \"\" && !Number.isNaN(totalNum) && totalNum > 0;\n\n    if (!fechaOk || !sectorOk || !detalleOk || !totalOk) {\n      showAlert(\"Completá fecha, sector, detalle y un total mayor a 0 antes de guardar.\", \"warning\");\n      return;\n    }\n\n    const queryAGuardar = appsmith.store.modoGasto === \"editar\" ? Update_gastos : Insert_gastos;\n\n    queryAGuardar.run(\n      () => {\n        Select_public_gastos1.run();\n        Total_record_public_gastos1.run();\n        closeModal(\"Modal1\");\n      },\n      (error) => {\n        showAlert(\"No se pudo guardar el gasto: \" + error.message, \"error\");\n      }\n    );\n  })()\n}}",
+  "parentId": "33nmxzdsmf",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 61,
+  "text": "Confirmar",
+  "topRow": 22,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "ibtnhtvwhv",
+  "widgetName": "Button2"
+}

@@ -1,0 +1,12 @@
+SELECT
+  *
+FROM
+  public.gastos
+WHERE
+  "sector" ilike '%{{Tabla_gastos.searchText}}%'
+ORDER BY
+  "{{Tabla_gastos.sortOrder.column || 'id'}}" {{Tabla_gastos.sortOrder.order == "desc" ? "" : "DESC"}}
+LIMIT
+  {{Tabla_gastos.pageSize}}
+OFFSET
+  {{Tabla_gastos.pageOffset}}

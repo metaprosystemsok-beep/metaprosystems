@@ -1,0 +1,1 @@
+SELECT COUNT(*) from public.tabla_detalles where detalle ilike '%{{Tabla_detalle.searchText}}%';

@@ -1,0 +1,1 @@
+UPDATE public.tabla_detalles SET "fecha"= '{{Tabla_detalle.updatedRow.fecha}}', "detalle"= '{{Tabla_detalle.updatedRow.detalle}}', "total"= '{{Tabla_detalle.updatedRow.total}}' WHERE "id"= {{Tabla_detalle.updatedRow.id}};

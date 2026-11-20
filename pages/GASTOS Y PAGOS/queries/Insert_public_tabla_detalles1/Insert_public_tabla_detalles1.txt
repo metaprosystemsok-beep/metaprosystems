@@ -1,0 +1,1 @@
+INSERT INTO public.tabla_detalles ("fecha","detalle","total") VALUES ('{{(Tabla_detalle.newRow || {}).fecha}}','{{(Tabla_detalle.newRow || {}).detalle}}','{{(Tabla_detalle.newRow || {}).total}}')

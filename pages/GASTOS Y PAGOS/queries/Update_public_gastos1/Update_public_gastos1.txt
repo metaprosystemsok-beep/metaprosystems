@@ -1,0 +1,1 @@
+UPDATE public.gastos SET "fecha"= '{{Tabla_gastos.updatedRow.fecha}}', "sector"= '{{Tabla_gastos.updatedRow.sector}}', "detalle"= '{{Tabla_gastos.updatedRow.detalle}}', "total"= '{{Tabla_gastos.updatedRow.total}}' WHERE "id"= {{Tabla_gastos.updatedRow.id}};
