@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9,
+  "bottomRow": 17,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,8 +33,8 @@
   "mobileRightColumn": 3,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "originalBottomRow": 9,
-  "originalTopRow": 4,
+  "originalBottomRow": 19,
+  "originalTopRow": 14,
   "overflow": "NONE",
   "parentColumnSpace": 16.546875,
   "parentId": "agxp4sn202",
@@ -46,7 +46,7 @@
   "text": "{{\n   (Select_public_gastos1.data || [])\n    .filter(r => {\n      const f = String(r.fecha || \"\").slice(0, 10);\n      const desdeOk = !DatePicker7.formattedDate || f >= DatePicker7.formattedDate;\n      const hastaOk = !DatePicker6.formattedDate || f <= DatePicker6.formattedDate;\n      const sectorOk = !Select2.selectedOptionValue || r.sector === Select2.selectedOptionValue;\n      return desdeOk && hastaOk && sectorOk;\n    })\n    .reduce((acc, r) => acc + Number(r.total || 0), 0)\n    .toLocaleString(\"es-AR\")\n}}",
   "textAlign": "LEFT",
   "textColor": "#ef4444",
-  "topRow": 4,
+  "topRow": 12,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

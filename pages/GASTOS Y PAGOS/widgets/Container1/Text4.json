@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 12,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 60,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 4,
-  "originalTopRow": 0,
+  "originalBottomRow": 16,
+  "originalTopRow": 12,
   "overflow": "NONE",
   "parentColumnSpace": 16.546875,
   "parentId": "agxp4sn202",
@@ -43,7 +43,7 @@
   "text": "Ingresos Ventas",
   "textAlign": "LEFT",
   "textColor": "#22c55e",
-  "topRow": 0,
+  "topRow": 8,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

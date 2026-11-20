@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 30,
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -24,7 +24,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "vg5plh89fw",
-  "leftColumn": 43,
+  "leftColumn": 44,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -37,7 +37,7 @@
   "originalTopRow": 25,
   "overflow": "NONE",
   "parentColumnSpace": 16.546875,
-  "parentId": "agxp4sn202",
+  "parentId": "6k3k1d1bbq",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
@@ -46,7 +46,7 @@
   "text": "{{ balance_mensual.data?.[0]?.resultado ?? 0 }}",
   "textAlign": "LEFT",
   "textColor": "#eab308",
-  "topRow": 25,
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
