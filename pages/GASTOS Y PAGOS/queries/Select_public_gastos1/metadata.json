@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  *\nFROM\n  public.gastos\nWHERE\n  \"sector\" ilike '%{{Tabla_gastos.searchText}}%'\nORDER BY\n  \"{{Tabla_gastos.sortOrder.column || 'id'}}\" {{Tabla_gastos.sortOrder.order == \"desc\" ? \"\" : \"DESC\"}}\nLIMIT\n  {{Tabla_gastos.pageSize}}\nOFFSET\n  {{Tabla_gastos.pageOffset}}",
+      "body": "SELECT\n  *\nFROM\n  public.gastos\nWHERE\n  \"sector\" ilike '%{{Tabla_gastos.searchText}}%'\nORDER BY\n  \"fecha\" DESC, \"id\" DESC\nLIMIT\n  {{Tabla_gastos.pageSize}}\nOFFSET\n  {{Tabla_gastos.pageOffset}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

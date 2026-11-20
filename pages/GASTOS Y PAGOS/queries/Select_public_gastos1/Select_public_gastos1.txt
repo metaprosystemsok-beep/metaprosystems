@@ -5,7 +5,7 @@ FROM
 WHERE
   "sector" ilike '%{{Tabla_gastos.searchText}}%'
 ORDER BY
-  "{{Tabla_gastos.sortOrder.column || 'id'}}" {{Tabla_gastos.sortOrder.order == "desc" ? "" : "DESC"}}
+  "fecha" DESC, "id" DESC
 LIMIT
   {{Tabla_gastos.pageSize}}
 OFFSET

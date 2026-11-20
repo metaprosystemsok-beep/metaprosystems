@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 31,
+  "bottomRow": 32,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -57,7 +57,7 @@
   "rightColumn": 63,
   "serverSideFiltering": false,
   "sourceData": "{{ [{ label: \"Todos\", value: \"\" }, ...Array.from(new Set((Select_public_gastos1.data || []).map(r => r.detalle).filter(Boolean))).map(v => ({ label: v, value: v }))] }}",
-  "topRow": 24,
+  "topRow": 25,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "pqtdteu2nc",
