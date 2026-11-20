@@ -1,0 +1,79 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 21,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "optionLabel"
+    },
+    {
+      "key": "optionValue"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "wcub28is74",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Buscar Carritos Recuparados",
+  "labelTextColor": "#22c55e",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 13,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 13,
+  "mobileTopRow": 15,
+  "needsErrorInfo": false,
+  "onOptionChange": "busca_bono.run()",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 21,
+  "originalTopRow": 14,
+  "parentColumnSpace": 16.546875,
+  "parentId": "b1a0r2fklp",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 25,
+  "serverSideFiltering": false,
+  "sourceData": "{{ \n  (() => {\n    const datos = busca_bono.data || [];\n    const unicos = [...new Set(datos.map(item => item.bono))].filter(Boolean);\n    return unicos.map(prod => ({ label: prod, value: prod }));\n  })()\n}}",
+  "topRow": 14,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "pjsb66gdoy",
+  "widgetName": "select_busca_bono"
+}

@@ -1,0 +1,14 @@
+SELECT SUM(costo_envio) as total
+FROM detalle_de_ventas
+WHERE CAST(fecha AS DATE) BETWEEN 
+      CAST('{{DatePicker1.selectedDate}}' AS DATE) 
+      AND 
+      CAST('{{DatePicker2.selectedDate}}' AS DATE)
+  AND (
+        '{{Select_busca_productos.selectedOptionValue}}' = ''
+        OR producto_venta = '{{Select_busca_productos.selectedOptionValue}}'
+      )
+			AND (
+    '{{select_busca_bono.selectedOptionValue}}' = '' 
+    OR bono = '{{select_busca_bono.selectedOptionValue}}'
+)
