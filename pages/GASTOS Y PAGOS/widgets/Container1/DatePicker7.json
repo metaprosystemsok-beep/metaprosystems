@@ -22,9 +22,6 @@
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
-      "key": "onDateSelected"
-    },
-    {
       "key": "defaultDate"
     }
   ],
@@ -56,7 +53,7 @@
   "mobileRightColumn": 7,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
-  "onDateSelected": "{{ Select_public_gastos1.run() }}",
+  "onDateSelected": "{{Select_public_gastos1.run();\nbalance_mensual.run()}}",
   "originalBottomRow": 26,
   "originalTopRow": 19,
   "parentColumnSpace": 16.283447265625,
